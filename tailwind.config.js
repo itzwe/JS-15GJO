@@ -10,6 +10,13 @@ module.exports = {
         lionTertiary: '#cddfcb',//
         liteGray:'#F9F9F9'
       },
+      screens: {
+        'xs': {min: '320px', max: '480px'},
+        // => @media (min-width: 320px) { ... }
+      },
+      fontFamily: {
+        'pretendard': ['pretendard']
+      }
     },
   },
   plugins: [],
