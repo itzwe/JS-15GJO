@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lion Place</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
+    <div class="bg-liteGray px-5 pb-5 pt-2">
+      <div class="swiper">
+        <div class="swiper-wrapper flex">
+          <div class="swiper-slide flex w-56 flex-col justify-center pr-5 text-xs font-semibold leading-[18px] text-white">
+            <button class="mb-2 h-[39px] w-[137px] rounded bg-lionPrimary">🔍 시술이 꼼꼼해요</button>
+            <button class="mb-2 h-[39px] w-[116px] rounded bg-lionPrimary">🤲 손이 빨라요</button>
+            <button class="mb-2 h-[39px] w-[161px] rounded bg-lionPrimary">💆‍♀️ 관리법을 잘 알려줘요</button>
+            <button class="mb-2 h-[39px] w-[137px] rounded bg-white text-black">📋 상담이 자세해요</button>
+          </div>
+        </div>
+        <button type="button">
+          <img src="../assets/icon/icon-down.svg" alt="이전" class="rotate-90" />
+        </button>
+        <button type="button" class="float-right">
+          <img src="../assets/icon/icon-down.svg" alt="다음" class="-rotate-90" />
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-8 px-4">
+      <h1 class="pb-4 text-center font-semibold">리뷰를 남겨주세요</h1>
+      <input type="file" class="hidden" />
+      <button class="mx-auto flex justify-center gap-1 rounded border p-3 text-center text-xs font-semibold">
+        <img src="../assets/icon/icon-photoBlack.svg" alt="사진" />사진추가 <span class="text-gray-400">최대 20장</span>
+      </button>
+      <div class="mt-4 rounded-lg bg-liteGray px-3 py-6 text-xs leading-5">
+        <h2 class="text-gray-400">리뷰 작성하기</h2>
+        <p class="line-clamp-2 h-[38px] w-[167px] overflow-hidden text-ellipsis text-lionContent">
+          진짜 맨날 근처오면 와서 4-5개씩은 사가는 곳입니다. 비건디저트 특유의 향이 안나서 더 좋아요!
+        </p>
+        <div class="text-end">0/<span class="text-gray-400">400</span></div>
+      </div>
+      <div class="flex justify-between pt-4 text-xs">
+        <button type="button" class="underline">리뷰 작성 유의사항</button>
+        <button type="submit" class="rounded bg-lionPrimary px-7 py-3 font-semibold text-white">등록하기</button>
+      </div>
+    </div>
+  </body>
+</html>
