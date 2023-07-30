@@ -8,7 +8,6 @@ const userPw = getNode('#userPass');
 const reUserPw = getNode('#reUserPass');
 const userEmail = getNode('#userEmail');
 const joinBtn = getNode('.joinBtn');
-const backBtn = getNode('.backBtn');
 
 
 //상태변수
@@ -135,6 +134,3 @@ userPw.addEventListener('input',handleCheckPw)
 reUserPw.addEventListener('input',handleCheckRePw)
 userEmail.addEventListener('input',handleCheckEmail)
 joinBtn.addEventListener('click',joinButton)
-backBtn.addEventListener('click',()=>{
-  history.back();
-})
