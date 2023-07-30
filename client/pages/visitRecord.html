@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lion Place</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/visitRecord.js" type="module"></script>
+  </head>
+  <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
+    <div class="flex items-center justify-center">
+      <div>
+        <header class="relative w-80 bg-lionPrimary px-[22px] pb-4 pt-9">
+          <h1 class="hidden">사용자 프로필</h1>
+          <button type="button" class="absolute right-7 top-4 rounded border px-1 text-xs text-white">쿠폰</button>
+          <span class="absolute right-5 top-2 rounded-full bg-white px-[5px] py-0 text-xs">1</span>
+          <div class="flex pb-3 pl-1 text-white">
+            <button class="relative mr-[19px] h-[56px] w-[56px] rounded-full border-2 border-white">
+              <img src="../assets/images/단지공주.jpg" alt="" class="h-[52px] w-[56px] rounded-full" />
+              <img src="../assets/icon/icon-pencilRound.svg" alt="프로필수정" class="absolute bottom-[-3px] right-[-3px]" />
+            </button>
+            <div>
+              <div>
+                <span class="flex items-center pb-1 text-sm font-semibold text-white">
+                  단지공주
+                  <button>
+                    <img class="mb-[4px] pl-1" src="../assets/icon/icon-share.svg" alt="공유하기" />
+                  </button>
+                </span>
+              </div>
+              <ul class="flex gap-3 text-xs font-normal">
+                <li class="flex flex-col text-center">
+                  <span>리뷰</span>
+                  <span>17</span>
+                </li>
+                <li class="flex flex-col border-x px-3 text-center">
+                  <span>사진</span>
+                  <span>19</span>
+                </li>
+                <li class="flex flex-col border-r pr-2 text-center">
+                  <span>팔로잉</span>
+                  <span>0</span>
+                </li>
+                <li class="flex flex-col text-center">
+                  <span>팔로워</span>
+                  <span>2</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex gap-2 p-1 text-center text-xs font-semibold leading-4 text-white">
+            <button class="flex w-44 items-center rounded-lg bg-lightGreen500 px-14 py-[6px]">
+              <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-5 pr-[5px]" />
+              글쓰기
+            </button>
+            <button class="flex w-20 items-center rounded-lg bg-lightGreen500 px-[14px] py-[6px]">
+              <img src="../assets/icon/icon-mission.svg" alt="미션" class="w-5 pr-[5px]" />
+              미션
+            </button>
+          </div>
+        </header>
+        <nav class="bg-lionPrimary">
+          <ul class="flex justify-around text-center font-semibold text-lionTertiary">
+            <li class="w-[68px]">
+              <a href="./feedPage.html">피드</a>
+            </li>
+            <li class="w-[68px] border-b-2 border-lionSecondary text-lionSecondary">
+              <a href="./visitRecord.html">방문</a>
+            </li>
+            <li class="w-[68px]"><a href="">리뷰</a></li>
+            <li class="w-[68px]"><a href="">예약&middot;주문</a></li>
+          </ul>
+        </nav>
+
+        <main class="bg-liteGray px-3 py-6 pb-[80px]">
+          <section>
+            <h2 class="font-semibold leading-6">3월 방문</h2>
+            <div class="my-4 rounded-lg bg-white p-3">
+              <div class="flex justify-between gap-1 pb-1">
+                <span class="font-semibold">비건 베이커리 구떼</span>
+                <span class="pt-1 text-xs text-gray-400">3.8.수&middot;1번째 방문</span>
+                <button class="pl-4">
+                  <img src="../assets/icon/icon-heart.svg" alt="하트" />
+                </button>
+                <button>
+                  <img src="../assets/icon/icon-more.svg" alt="더보기" />
+                </button>
+              </div>
+              <div class="flex gap-4 text-xs text-lionContent">
+                <div class="leading-5">
+                  <p class="line-clamp-2 h-[40px] w-[167px] text-ellipsis">
+                    진짜 맨날 근처오면 와서 4-5개씩은 사가는 곳입니다. 비건디저트 특유의 향이 안나서 더 좋아요!
+                  </p>
+                  <div class="mt-1">
+                    <button class="rounded bg-liteGray px-2 py-[2px]">✨매장이 청결해요</button>
+                    <button class="rounded bg-liteGray px-2 py-[2px]">✨+2</button>
+                  </div>
+                </div>
+                <img src="../assets/images/food/donut.svg" alt="도넛" class="h-[72px] w-20" />
+              </div>
+              <p class="text-xs text-gray-400">파운드 외 2 &middot; 12,300원</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="font-semibold leading-6">2월 방문</h2>
+            <div class="my-4 rounded-lg bg-white p-3">
+              <div class="flex justify-between gap-1 pb-1">
+                <span class="font-semibold">마포곱창타운 연남점</span>
+                <span class="pt-1 text-xs text-gray-400">2.18.토&middot;1번째 방문</span>
+                <button class="pl-2">
+                  <img src="../assets/icon/icon-heart.svg" alt="하트" />
+                </button>
+                <button>
+                  <img src="../assets/icon/icon-more.svg" alt="더보기" />
+                </button>
+              </div>
+              <div class="visit-list flex flex-wrap gap-4 text-xs text-lionContent"></div>
+              <p class="pt-1 text-xs text-gray-400">곱창전골 &middot; 50,900원</p>
+              <button
+                type="button"
+                class="write-review mt-1 flex items-center gap-1 rounded-lg bg-lionPrimary px-24 py-[6px] text-center text-xs font-semibold leading-4 text-white"
+              >
+                <img src="../assets/icon/icon-pencil.svg" alt="연필" />리뷰 쓰기
+              </button>
+            </div>
+          </section>
+        </main>
+        <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
+          <ul class="flex items-center justify-around">
+            <li>
+              <a class="flex flex-col items-center justify-center" href=""
+                ><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a
+              >
+            </li>
+            <li>
+              <a class="flex flex-col items-center justify-center" href=""
+                ><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a
+              >
+            </li>
+            <li class="flex flex-col items-center">
+              <a class="flex flex-col items-center justify-center" href=""
+                ><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a
+              >
+            </li>
+            <li class="flex flex-col items-center">
+              <a class="flex flex-col items-center justify-center" href=""
+                ><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a
+              >
+            </li>
+            <li>
+              <a class="flex flex-col items-center justify-center" href=""
+                ><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
