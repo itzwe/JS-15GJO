@@ -5,129 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/reviewChoicePageMain.js" type="module"></script>
   </head>
   <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
-    <div class="flex items-center justify-center">
-      <div>
-        <header class="bg-white pt-3">
-          <div class="flex items-center justify-between px-2 py-3">
-            <button type="button">
-              <img src="../assets/icon/icon-back.svg" alt="뒤로가기" class="h-8 w-8" />
+    <div class="flex max-w-xs flex-col items-center justify-center">
+      <header class="flex w-full items-center justify-between bg-white px-2 py-3 pt-3">
+        <button type="button">
+          <img src="../assets/icon/icon-back.svg" alt="뒤로가기" class="h-8 w-8" />
+        </button>
+        <h1 class="text-base font-black">리뷰 선택</h1>
+        <button type="button">
+          <img src="../assets/icon/icon-close.svg" alt="취소" class="h-6 w-6" />
+        </button>
+      </header>
+
+      <div class="bg-gray-200">
+        <div class="flex justify-between px-3 py-3">
+          <div class="flex gap-2">
+            <button type="button" class="flex gap-2">
+              <img src="../assets/icon/icon-hamburger.svg" alt="모아보기" />
+              <p class="text-xs font-semibold">전체</p>
             </button>
-
-            <h1 class="text-base font-black">리뷰 선택</h1>
-
-            <button type="button">
-              <img src="../assets/icon/icon-close.svg" alt="취소" class="h-6 w-6" />
-            </button>
-          </div>
-        </header>
-
-        <div class="bg-gray-200">
-          <div class="flex justify-between px-3 py-3">
-            <div class="flex gap-2">
-              <button type="button" class="flex gap-2">
-                <img src="../assets/icon/icon-hamburger.svg" alt="모아보기" />
-                <p class="text-xs font-semibold">전체</p>
-              </button>
-              <button class="flex gap-2">
-                <img src="../assets/icon/icon-photo.svg" alt="사진" class="h-[18px] w-[18px]" />
-                <p class="text-xs text-gray-400">사진</p>
-              </button>
-            </div>
             <button class="flex gap-2">
-              <p class="text-xs text-gray-500">최신순</p>
-              <img src="../assets/icon/icon-down.svg" alt="" />
+              <img src="../assets/icon/icon-photo.svg" alt="사진" class="h-[18px] w-[18px]" />
+              <a href="./themePage.html"><p class="text-xs text-gray-400">사진</p></a>
             </button>
           </div>
-
-          <ul class="px-[15px] py-2">
-            <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-              <img src="../assets/images/food/noodle.svg" alt="라멘 이미지" />
-              <button type="button">
-                <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
-              </button>
-              <div class="px-3 leading-5">
-                <p class="font-semibold">후타츠 홍대본점</p>
-                <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">홍대에 있는 소바중에 제일 맛있어요!!!</p>
-                <p class="text-[10px] font-normal text-gray-400">서울시 서교동 | 4.1토 방문</p>
-              </div>
-            </li>
-
-            <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-              <img src="../assets/images/food/cheesePizza.svg" alt="치즈가 늘어나는 피자" />
-              <button type="button">
-                <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
-              </button>
-              <div class="px-3 leading-5">
-                <p class="font-semibold">마노아</p>
-                <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">
-                  피자가 도우도 얇은데 치즈가 그냥 가득하니 아주 존맛탱이었습니다.
-                </p>
-                <p class="text-[10px] font-normal text-gray-400">제주시 구좌읍 | 22.12.24.토 방문</p>
-              </div>
-            </li>
-
-            <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-              <img src="../assets/images/food/person.svg" alt="사람" />
-              <button type="button">
-                <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
-              </button>
-              <div class="px-3 leading-5">
-                <p class="font-semibold">온야드</p>
-                <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">
-                  뭘해도 사진에 머리가 안담겨요ㅜㅠㅜ지짜 너무 만족했어용
-                </p>
-                <p class="text-[10px] font-normal text-gray-400">서울시 성수동1가 | 22.11.15.토 방문</p>
-              </div>
-            </li>
-
-            <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-              <img src="../assets/images/food/coffee.svg" alt="아이스 아메리카노" />
-              <button type="button">
-                <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
-              </button>
-              <div class="px-3 leading-5">
-                <p class="font-semibold">titleText</p>
-                <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">content</p>
-                <p class="text-[10px] font-normal text-gray-400">text</p>
-              </div>
-            </li>
-
-            <li class="relative flex items-center rounded-2xl bg-white text-xs">
-              <img src="../assets/images/food/pizza.svg" alt="피자" />
-              <button type="button">
-                <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
-              </button>
-              <div class="px-3 leading-5">
-                <p class="font-semibold">titleText</p>
-                <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">content</p>
-                <p class="text-[10px] font-normal text-gray-400">text</p>
-              </div>
-            </li>
-          </ul>
+          <button class="flex gap-2">
+            <p class="text-xs text-gray-500">최신순</p>
+            <img src="../assets/icon/icon-down.svg" alt="" />
+          </button>
         </div>
 
-        <nav class="sticky bottom-0 left-0 right-0 h-[70px] bg-white p-2 text-xs">
-          <ul class="flex items-center justify-around">
-            <li>
-              <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
-            </li>
-            <li>
-              <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
-            </li>
-            <li class="flex flex-col items-center">
-              <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
-            </li>
-            <li class="flex flex-col items-center">
-              <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
-            </li>
-            <li>
-              <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="px-[15px] py-2">
+          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
+            <img src="../assets/images/food/noodle.svg" alt="라멘 이미지" />
+            <button type="button">
+              <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
+            </button>
+            <div class="px-3 leading-5">
+              <p class="font-semibold">후타츠 홍대본점</p>
+              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">홍대에 있는 소바중에 제일 맛있어요!!!</p>
+              <p class="text-[10px] font-normal text-gray-400">서울시 서교동 | 4.1토 방문</p>
+            </div>
+          </li>
+
+          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
+            <img src="../assets/images/food/cheesePizza.svg" alt="치즈가 늘어나는 피자" />
+            <button type="button">
+              <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
+            </button>
+            <div class="px-3 leading-5">
+              <p class="font-semibold">마노아</p>
+              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">
+                피자가 도우도 얇은데 치즈가 그냥 가득하니 아주 존맛탱이었습니다.
+              </p>
+              <p class="text-[10px] font-normal text-gray-400">제주시 구좌읍 | 22.12.24.토 방문</p>
+            </div>
+          </li>
+
+          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
+            <img src="../assets/images/food/person.svg" alt="사람" />
+            <button type="button">
+              <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
+            </button>
+            <div class="px-3 leading-5">
+              <p class="font-semibold">온야드</p>
+              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">
+                뭘해도 사진에 머리가 안담겨요ㅜㅠㅜ지짜 너무 만족했어용
+              </p>
+              <p class="text-[10px] font-normal text-gray-400">서울시 성수동1가 | 22.11.15.토 방문</p>
+            </div>
+          </li>
+
+          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
+            <img src="../assets/images/food/coffee.svg" alt="아이스 아메리카노" />
+            <button type="button">
+              <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
+            </button>
+            <div class="px-3 leading-5">
+              <p class="font-semibold">허니바람</p>
+              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">커피 존맛탱</p>
+              <p class="text-[10px] font-normal text-gray-400">경기도 화성 진안동 | 22.11.11.금 방문</p>
+            </div>
+          </li>
+
+          <li class="relative flex items-center rounded-2xl bg-white text-xs">
+            <img src="../assets/images/food/pizza.svg" alt="피자" />
+            <button type="button">
+              <img src="../assets/icon/icon-call.svg" alt="전화기 모양" class="absolute right-3 top-3" />
+            </button>
+            <div class="px-3 leading-5">
+              <p class="font-semibold">뉴오더클럽</p>
+              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">반반 피자 맛있어!</p>
+              <p class="text-[10px] font-normal text-gray-400">서울시 연남동 | 22.7.25.화 방문</p>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
+        <ul class="flex items-center justify-around">
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
+          </li>
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
+          </li>
+          <li class="flex flex-col items-center">
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
+          </li>
+          <li class="flex flex-col items-center">
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
+          </li>
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
