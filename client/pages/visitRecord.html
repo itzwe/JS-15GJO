@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/visitRecord.js" type="module"></script>
   </head>
   <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
     <div class="flex items-center justify-center">
@@ -14,14 +15,14 @@
           <button type="button" class="absolute right-7 top-4 rounded border px-1 text-xs text-white">쿠폰</button>
           <span class="absolute right-5 top-2 rounded-full bg-white px-[5px] py-0 text-xs">1</span>
           <div class="flex pb-3 pl-1 text-white">
-            <button class="relative mr-[19px] rounded-full border-4 border-white">
-              <img src="../assets/images/단지.jpg" alt="" class="h-[56px] w-[56px] rounded-full" />
+            <button class="relative mr-[19px] h-[56px] w-[56px] rounded-full border-2 border-white">
+              <img src="../assets/images/단지공주.jpg" alt="" class="h-[52px] w-[56px] rounded-full" />
               <img src="../assets/icon/icon-pencilRound.svg" alt="프로필수정" class="absolute bottom-[-3px] right-[-3px]" />
             </button>
             <div>
               <div>
                 <span class="flex items-center pb-1 text-sm font-semibold text-white">
-                  단지
+                  단지공주
                   <button>
                     <img class="mb-[4px] pl-1" src="../assets/icon/icon-share.svg" alt="공유하기" />
                   </button>
@@ -71,7 +72,7 @@
           </ul>
         </nav>
 
-        <main class="bg-liteGray px-3 py-6">
+        <main class="bg-liteGray px-3 py-6 pb-[80px]">
           <section>
             <h2 class="font-semibold leading-6">3월 방문</h2>
             <div class="my-4 rounded-lg bg-white p-3">
@@ -85,9 +86,9 @@
                   <img src="../assets/icon/icon-more.svg" alt="더보기" />
                 </button>
               </div>
-              <div class="flex gap-3 text-xs text-lionContent">
+              <div class="flex gap-4 text-xs text-lionContent">
                 <div class="leading-5">
-                  <p class="line-clamp-2 h-[40px] w-[167px] overflow-hidden text-ellipsis">
+                  <p class="line-clamp-2 h-[40px] w-[167px] text-ellipsis">
                     진짜 맨날 근처오면 와서 4-5개씩은 사가는 곳입니다. 비건디저트 특유의 향이 안나서 더 좋아요!
                   </p>
                   <div class="mt-1">
@@ -95,7 +96,7 @@
                     <button class="rounded bg-liteGray px-2 py-[2px]">✨+2</button>
                   </div>
                 </div>
-                <img src="../assets/images/food/donut.png" alt="도넛" class="h-[72px] w-20" />
+                <img src="../assets/images/food/donut.svg" alt="도넛" class="h-[72px] w-20" />
               </div>
               <p class="text-xs text-gray-400">파운드 외 2 &middot; 12,300원</p>
             </div>
@@ -105,23 +106,23 @@
             <h2 class="font-semibold leading-6">2월 방문</h2>
             <div class="my-4 rounded-lg bg-white p-3">
               <div class="flex justify-between gap-1 pb-1">
-                <span class="font-semibold">비건 베이커리 구떼</span>
-                <span class="pt-1 text-xs text-gray-400">3.8.수&middot;1번째 방문</span>
-                <button class="pl-4">
+                <span class="font-semibold">마포곱창타운 연남점</span>
+                <span class="pt-1 text-xs text-gray-400">2.18.토&middot;1번째 방문</span>
+                <button class="pl-2">
                   <img src="../assets/icon/icon-heart.svg" alt="하트" />
                 </button>
                 <button>
                   <img src="../assets/icon/icon-more.svg" alt="더보기" />
                 </button>
               </div>
-              <div class="flex gap-3 text-xs text-lionContent"></div>
-              <p class="text-xs text-gray-400">파운드 외 2 &middot; 12,300원</p>
-              <a
-                class="mt-1 flex items-center gap-1 rounded-lg bg-lionPrimary px-24 py-[6px] text-center text-xs font-semibold leading-4 text-white"
-                href="./visitLike.html"
+              <div class="visit-list flex flex-wrap gap-4 text-xs text-lionContent"></div>
+              <p class="pt-1 text-xs text-gray-400">곱창전골 &middot; 50,900원</p>
+              <button
+                type="button"
+                class="write-review mt-1 flex items-center gap-1 rounded-lg bg-lionPrimary px-24 py-[6px] text-center text-xs font-semibold leading-4 text-white"
               >
                 <img src="../assets/icon/icon-pencil.svg" alt="연필" />리뷰 쓰기
-              </a>
+              </button>
             </div>
           </section>
         </main>
