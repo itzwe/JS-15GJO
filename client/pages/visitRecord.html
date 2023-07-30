@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/visitRecord.js" type="module"></script>
   </head>
   <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
     <div class="flex items-center justify-center">
@@ -60,84 +61,72 @@
         </header>
         <nav class="bg-lionPrimary">
           <ul class="flex justify-around text-center font-semibold text-lionTertiary">
-            <li class="w-[68px] border-b-2 border-lionSecondary text-lionSecondary">
+            <li class="w-[68px]">
               <a href="./feedPage.html">피드</a>
             </li>
-            <li class="w-[68px]">
-              <a href="./visitRecord.html" class="">방문</a>
+            <li class="w-[68px] border-b-2 border-lionSecondary text-lionSecondary">
+              <a href="./visitRecord.html">방문</a>
             </li>
             <li class="w-[68px]"><a href="">리뷰</a></li>
             <li class="w-[68px]"><a href="">예약&middot;주문</a></li>
           </ul>
         </nav>
-        <main>
+
+        <main class="bg-liteGray px-3 py-6 pb-[80px]">
           <section>
-            <div class="bg-slate-50">
-              <ul class="flex justify-around py-2 text-xs font-semibold leading-6">
-                <li class="rounded bg-white px-2"><button type="button">전체</button></li>
-                <li class="rounded bg-white px-2"><button type="button">홍익대</button></li>
-                <li class="rounded bg-white px-2"><button type="button">합정역</button></li>
-                <li class="rounded bg-lightGreen500 px-2 text-white">
-                  <button type="button">망원동</button>
-                </li>
-                <li class="rounded bg-white px-2"><button type="button">현위치</button></li>
-              </ul>
+            <h2 class="font-semibold leading-6">3월 방문</h2>
+            <div class="my-4 rounded-lg bg-white p-3">
+              <div class="flex justify-between gap-1 pb-1">
+                <span class="font-semibold">비건 베이커리 구떼</span>
+                <span class="pt-1 text-xs text-gray-400">3.8.수&middot;1번째 방문</span>
+                <button class="pl-4">
+                  <img src="../assets/icon/icon-heart.svg" alt="하트" />
+                </button>
+                <button>
+                  <img src="../assets/icon/icon-more.svg" alt="더보기" />
+                </button>
+              </div>
+              <div class="flex gap-4 text-xs text-lionContent">
+                <div class="leading-5">
+                  <p class="line-clamp-2 h-[40px] w-[167px] text-ellipsis">
+                    진짜 맨날 근처오면 와서 4-5개씩은 사가는 곳입니다. 비건디저트 특유의 향이 안나서 더 좋아요!
+                  </p>
+                  <div class="mt-1">
+                    <button class="rounded bg-liteGray px-2 py-[2px]">✨매장이 청결해요</button>
+                    <button class="rounded bg-liteGray px-2 py-[2px]">✨+2</button>
+                  </div>
+                </div>
+                <img src="../assets/images/food/donut.svg" alt="도넛" class="h-[72px] w-20" />
+              </div>
+              <p class="text-xs text-gray-400">파운드 외 2 &middot; 12,300원</p>
             </div>
           </section>
 
           <section>
-            <ul class="flex justify-center gap-1 px-4 pt-2 text-sm">
-              <li class="rounded-2xl bg-lightGreen500 px-[5px] py-1 text-white">
-                <button type="button">한식</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">아이와 함께</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">양식</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">문화예술</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">일식</button>
-              </li>
-            </ul>
-          </section>
-
-          <section class="mt-3 px-4 py-2 text-xs font-semibold leading-4">
-            <div
-              class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionPrimary p-2 pt-2 text-center text-white"
-            ></div>
-            <h2 class="">멋쟁이사자처럼</h2>
-            <span class="text-lionContent">사진리뷰 2 &middot; 3.1.수</span>
-            <figure class="">
-              <figcaption class="hidden" aria-hidden="true">피자</figcaption>
-              <img src="../assets/images/food/pizza.png" alt="피자 이미지" class="w-full" />
-            </figure>
-            <p class="ml-2 mt-1 max-w-[320px] text-lionContent">
-              주말엔 매일 줄 서 있어서 먹을 수가 없었는데 평일에 다행히 갈 수 있어서 너무 좋았어요! 줄 안기다리고 먹었는데 와 너무
-              맛있었습니다!!
-            </p>
-          </section>
-
-          <section class="mt-3 px-4 py-2 text-xs font-semibold leading-4">
-            <div
-              class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionPrimary p-2 pt-2 text-center text-white"
-            ></div>
-            <h2 class="">집보다는 카페지</h2>
-            <span class="text-lionContent">사진리뷰 2 &middot; 3.1.수</span>
-            <figure class="">
-              <figcaption class="hidden" aria-hidden="true">피자</figcaption>
-              <img src="../assets/images/food/icecream.png" alt="아이스크림 이미지" class="w-full" />
-            </figure>
-            <p class="ml-2 mt-1 max-w-[320px] text-lionContent">
-              주말엔 매일 줄 서 있어서 먹을 수가 없었는데 평일에 다행히 갈 수 있어서 너무 좋았어요! 줄 안기다리고 먹었는데 와 너무
-              맛있었습니다!!
-            </p>
+            <h2 class="font-semibold leading-6">2월 방문</h2>
+            <div class="my-4 rounded-lg bg-white p-3">
+              <div class="flex justify-between gap-1 pb-1">
+                <span class="font-semibold">마포곱창타운 연남점</span>
+                <span class="pt-1 text-xs text-gray-400">2.18.토&middot;1번째 방문</span>
+                <button class="pl-2">
+                  <img src="../assets/icon/icon-heart.svg" alt="하트" />
+                </button>
+                <button>
+                  <img src="../assets/icon/icon-more.svg" alt="더보기" />
+                </button>
+              </div>
+              <div class="visit-list flex flex-wrap gap-4 text-xs text-lionContent"></div>
+              <p class="pt-1 text-xs text-gray-400">곱창전골 &middot; 50,900원</p>
+              <button
+                type="button"
+                class="write-review mt-1 flex items-center gap-1 rounded-lg bg-lionPrimary px-24 py-[6px] text-center text-xs font-semibold leading-4 text-white"
+              >
+                <img src="../assets/icon/icon-pencil.svg" alt="연필" />리뷰 쓰기
+              </button>
+            </div>
           </section>
         </main>
-        <nav class="relative h-[70px] -translate-y-full bg-white p-2 text-xs">
+        <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
           <ul class="flex items-center justify-around">
             <li>
               <a class="flex flex-col items-center justify-center" href=""
