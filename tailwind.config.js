@@ -33,6 +33,13 @@ module.exports = {
         'custom-gradient' :
         "linear-gradient(3deg, #FFF 45%, rgba(255, 255, 255, 0.00) 100%) , url('../assets/images/food/cake.svg')"
       },
+      screens: {
+        'xs': {min: '320px', max: '480px'},
+        // => @media (min-width: 320px) { ... }
+      },
+      fontFamily: {
+        'pretendard': ['pretendard']
+      }
     },
   },
 };
