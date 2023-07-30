@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-      type="image/xml+svg"
-    />
+    <link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" type="image/xml+svg" />
     <link rel="stylesheet" href="../css/main.css" />
     <script src="./js/main.js" type="module"></script>
     <title>Lion Place</title>
   </head>
 
   <body class="mx-auto h-screen max-w-xs bg-slate-500 font-pretendard leading-relaxed">
-    <div class="bg-darkGray xs:flex xs:items-center xs:justify-center h-auto min-h-full pb-[70px]">
+    <div class="h-auto min-h-full bg-darkGray pb-[70px] xs:flex xs:items-center xs:justify-center">
       <header class="flex h-12 max-w-xs items-center justify-between bg-transparent px-2 py-3">
         <button><img src="../assets/icon/icon-left.svg" alt="뒤로가기" /></button>
-        <button class="w-15 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white">
+        <button
+          class="w-15 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white"
+        >
           <img src="../assets/icon/icon-check-white.svg" alt="등록" />
           <span class="text-xs">등록</span>
         </button>
@@ -61,7 +59,9 @@
               </div>
             </div>
 
-            <button class="w-33 mb-5 mt-20 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white">
+            <button
+              class="w-33 mb-5 mt-20 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white"
+            >
               <img src="../assets/icon/icon-photo.svg" alt="사진추가 아이콘" />
               <span class="mx-1 text-base">커버변경</span>
               <span class="text-xs text-lightGray2">필수</span>
@@ -70,7 +70,7 @@
         </form>
       </div>
 
-      <div class="items-center rounded-t-xl bg-white text-center h-auto min-h-full">
+      <div class="h-auto min-h-full items-center rounded-t-xl bg-white text-center">
         <div class="flex justify-between px-5 py-4">
           <div class="flex justify-between font-semibold">
             <p class="text-base">리뷰</p>
@@ -88,9 +88,7 @@
         </div>
 
         <div class="p-[52px]">
-          <p class="py-2 text-xs font-light text-lightGray2">
-            내가 작성한 리뷰를 추가해<br />새로운 테마 리스트를 만들어보세요.
-          </p>
+          <p class="py-2 text-xs font-light text-lightGray2">내가 작성한 리뷰를 추가해<br />새로운 테마 리스트를 만들어보세요.</p>
           <button class="my-3 inline-flex h-11 w-32 cursor-pointer items-center rounded-3xl bg-lightGreen500 px-4 py-2 text-white">
             <img class="m-0 h-6 w-6" src="../assets/icon/icon-plus.svg" alt="추가하기 아이콘" />
             <span class="text-xs">리뷰 추가하기</span>
@@ -99,27 +97,22 @@
       </div>
     </div>
 
-    <nav class="h-[70px] relative -translate-y-full bg-white p-2 text-xs">
+    <nav class="relative h-[70px] -translate-y-full bg-white p-2 text-xs">
       <ul class="flex items-center justify-around">
         <li>
-          <a class="flex flex-col items-center justify-center" href=""
-            ><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
+          <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
         </li>
         <li>
-          <a class="flex flex-col items-center justify-center" href=""
-            ><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
+          <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
         </li>
         <li class="flex flex-col items-center">
-          <a class="flex flex-col items-center justify-center" href=""
-            ><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
+          <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
         </li>
         <li class="flex flex-col items-center">
-          <a class="flex flex-col items-center justify-center" href=""
-            ><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
+          <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
         </li>
         <li>
-          <a class="flex flex-col items-center justify-center" href=""
-            ><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
+          <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
         </li>
       </ul>
     </nav>

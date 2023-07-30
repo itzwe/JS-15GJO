@@ -27,8 +27,12 @@ module.exports = {
       },
       fontFamily: {
         'pretendard': ['pretendard']
-      }
+      },
+
+      backgroundImage: {
+        'custom-gradient' :
+        "linear-gradient(3deg, #FFF 45%, rgba(255, 255, 255, 0.00) 100%) , url('../assets/images/food/cake.svg')"
+      },
     },
   },
-  plugins: [],
 };
