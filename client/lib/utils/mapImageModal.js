@@ -3,14 +3,13 @@ import {getNode, getNodes} from "../dom/getNode.js"
 const images  = getNodes('.modal-image');
 
 const modal = getNode('.modal'); 
-const prevButton = getNode('.prev');
-const nextButton = getNode('.next');
+
 const modalImage = getNode('.modal-i'); 
 const close = getNode('.close');
 let currentIndex = 0;
 
 // 모달에 이미지를 설정하는 함수.
-function setModalImage(index) {
+export function setModalImage(index) {
   if (index >= images.length || index < 0) return;
 
   const imageUrl = images[index].getAttribute('src');
@@ -19,12 +18,12 @@ function setModalImage(index) {
 }
 
 // 이전 이미지로 이동하는 함수.
-function prevImage() {
+export function prevImage() {
   setModalImage(currentIndex - 1);
 }
 
 // 다음 이미지로 이동하는 함수.
-function nextImage() {
+export function nextImage() {
   setModalImage(currentIndex + 1);
 }
 
@@ -38,8 +37,7 @@ images.forEach((image, index) => {
 });
 
 // 이전, 다음 버튼 클릭 이벤트를 추가.
-prevButton.addEventListener('click', prevImage);
-nextButton.addEventListener('click', nextImage);
+
 
 // x 버튼 클릭 시 모달 닫기.
 window.addEventListener('click', (e) => {

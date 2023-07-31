@@ -2,7 +2,7 @@ import {getNode} from '../dom/getNode.js'
 
 const plus = document.querySelector('.plusButton');
 
-function mapPlusHandler(){
+export function mapPlusHandler(){
   console.log('hi');
 }
 
