@@ -16,8 +16,8 @@
     <title>Lion Place</title>
   </head>
 
-  <body class="mx-auto h-screen max-w-[480px] font-pretendard">
-    <div class="relative mx-auto h-screen w-[320px] bg-lionPrimary">
+  <body class="mx-auto h-screen max-w-xs font-pretendard">
+    <div class="relative mx-auto h-screen max-w-xs bg-lionPrimary text-white">
       <button class="backBtn absolute left-2 top-2">
         <img src="../assets/icon/icon-back.svg" alt="뒤로가기" />
       </button>
@@ -39,7 +39,7 @@
               type="text"
               placeholder="영문 3자 이상"
               required
-              class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+              class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
             />
             <span
               class="idErr absolute right-2 top-8 hidden rounded-full border-transparent bg-pink-200 p-1 text-xs text-red-700"
@@ -59,7 +59,7 @@
               type="email"
               placeholder="인증 가능한 이메일 주소"
               required
-              class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+              class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
             />
             <span
               class="checkEmail absolute right-2 top-8 hidden h-6 w-6 rounded-full border-transparent bg-blue-200 p-1 text-center text-xs text-blue-700"
@@ -74,7 +74,7 @@
               type="password"
               placeholder="8문자 이상, 특수 문자 포함"
               required
-              class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+              class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
             />
             <span
               class="pwErr absolute right-2 top-8 hidden rounded-full border-transparent bg-pink-200 p-1 text-xs text-red-700"
@@ -94,7 +94,7 @@
               type="password"
               placeholder="8문자 이상, 특수 문자 포함"
               required
-              class="container rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+              class="container rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
             />
             <span
               class="checkPw2 absolute right-2 top-8 hidden h-6 w-6 rounded-full border-transparent bg-blue-200 p-1 text-center text-xs text-blue-700"
@@ -106,9 +106,9 @@
 
           <button
             type="submit"
-            class="joinBtn container mt-16 h-14 rounded border border-lightGray bg-transparent hover:border-lionSecondary hover:bg-lionSecondary"
+            class="joinBtn container mt-16 h-14 text-lionContent rounded border border-lightGray bg-white hover:text-white hover:border-lionSecondary hover:bg-lionSecondary"
           >
-            가입하기
+            회원가입
           </button>
         </fieldset>
       </form>

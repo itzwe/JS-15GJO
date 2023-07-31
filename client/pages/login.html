@@ -15,8 +15,8 @@
     <title>Lion Place</title>
   </head>
 
-  <body class="mx-auto h-screen max-w-[480px] font-pretendard">
-    <div class="relative mx-auto h-screen w-[320px] bg-lionPrimary">
+  <body class="mx-auto h-screen max-w-xs font-pretendard">
+    <div class="relative mx-auto h-screen w-xs bg-lionPrimary text-white">
       <button class="backBtn absolute left-2 top-2">
         <img src="../assets/icon/icon-back.svg" alt="뒤로가기" />
       </button>
@@ -40,7 +40,7 @@
                 type="text"
                 placeholder="아이디를 입력해주세요"
                 required
-                class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+                class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
               />
             </div>
 
@@ -51,7 +51,7 @@
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
                 required
-                class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+                class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
               />
             </div>
 
@@ -61,15 +61,16 @@
             </div>
 
             <button
+            onclick="location.href = './setting.html'"
               type="submit"
-              class="container mb-3 h-14 rounded border border-lightGray bg-transparent hover:border-lionSecondary hover:bg-lionSecondary"
+              class="container mb-3 h-14 text-lionContent rounded border border-lightGray bg-white hover:text-white hover:border-lionSecondary hover:bg-lionSecondary"
             >
               로그인
             </button>
-            <a
-              href="./join.html"
-              class="container mb-3 block h-14 rounded border border-lightGray bg-transparent text-center leading-[56px] hover:border-lionSecondary hover:bg-lionSecondary"
-              >회원가입</a
+            <button
+              onclick="location.href = './join.html'"
+              class="container mb-3 block h-14 rounded border border-white bg-transparent text-center leading-[56px] hover:border-lionSecondary hover:bg-lionSecondary"
+              >회원가입</button
             >
           </div>
         </fieldset>
