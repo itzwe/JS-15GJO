@@ -14,7 +14,11 @@
       <span class="absolute right-5 top-2 rounded-full bg-white px-[5px] py-0 text-xs">1</span>
       <div class="flex pb-3 pl-1 text-white">
         <button class="relative mr-[19px] h-[56px] w-[56px] rounded-full border-2 border-white">
+          <<<<<<< HEAD
           <img src="../assets/images/단지공주.jpg" alt="" class="h-[52px] w-[56px] rounded-full" />
+          =======
+          <img src="../assets/images/etc/단지공주.jpg" alt="프로필" class="h-[52px] w-[56px] rounded-full" />
+          >>>>>>> develop
           <img src="../assets/icon/icon-pencilRound.svg" alt="프로필수정" class="absolute bottom-[-3px] right-[-3px]" />
         </button>
         <div>
@@ -46,35 +50,35 @@
           </ul>
         </div>
       </div>
-      <div class="flex gap-2 p-1 text-center text-xs font-semibold leading-4 text-white">
-        <button class="flex w-44 items-center rounded-lg bg-lightGreen500 px-14 py-[6px]">
-          <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-5 pr-[5px]" />
+      <div class="flex flex-row justify-between gap-2 p-1 text-xs font-semibold leading-4 text-white">
+        <button class="justify-center-center inline-flex w-4/6 items-center rounded-lg bg-lightGreen500 px-14 py-1 hover:bg-lionSecondary">
+          <img src="../assets/icon/icon-pencil.svg" alt="연필" class="mr-[5px] w-5" />
           글쓰기
         </button>
-        <button class="flex w-20 items-center rounded-lg bg-lightGreen500 px-[14px] py-[6px]">
-          <img src="../assets/icon/icon-mission.svg" alt="미션" class="w-5 pr-[5px]" />
-          미션
+        <button class="justify-center-center inline-flex w-2/6 items-center rounded-lg bg-lightGreen500 px-4 py-1 hover:bg-lionSecondary">
+          <img src="../assets/icon/icon-mission.svg" alt="미션" class="mr-[5px] w-5" />
+          <span>미션</span>
         </button>
       </div>
     </header>
     <nav class="bg-lionPrimary">
       <ul class="flex justify-around text-center font-semibold text-lionTertiary">
-        <li class="w-[68px] border-b-2 border-lionSecondary text-lionSecondary">
+        <li class="w-[68px]">
           <a href="./feedPage.html">피드</a>
         </li>
         <li class="w-[68px]">
           <a href="./visitRecord.html" class="">방문</a>
         </li>
-        <li class="w-[68px]"><a href="">리뷰</a></li>
-        <li class="w-[68px]"><a href="" class="whitespace-nowrap">예약&middot;주문</a></li>
+        <li class="w-[68px] border-b-2 border-lionSecondary text-lionSecondary"><a href="">리뷰</a></li>
+        <li class="w-[68px]"><a href="">예약&middot;주문</a></li>
       </ul>
     </nav>
 
-    <div class="flex flex-col bg-gray-200 px-[6px] pb-[37px]">
+    <div class="flex flex-col bg-lightGray700 px-4 pb-[37px]">
       <div class="py-3 font-semibold">테마 <span class="text-gray-400">1</span></div>
-      <div class="flex justify-between">
-        <div class="flex h-[184px] w-[148px] flex-col justify-end rounded-xl bg-custom-gradient pb-7 pl-[9px]">
-          <!-- <button type="button" class="h-[18px] w-[56px] rounded bg-white px-1 text-[12px]">임시저장</button> -->
+      <div class="flex justify-between gap-3">
+        <div class="flex h-[184px] w-[148px] flex-col justify-around rounded-xl bg-custom-gradient pl-[9px]">
+          <button type="button" class="h-[18px] w-[56px] rounded bg-white px-1 text-[12px]">임시저장</button>
           <div>
             <p class="text-sm font-semibold">연남/합정 데이트</p>
             <div class="flex gap-[3px] text-xs">
@@ -97,7 +101,7 @@
     </div>
 
     <div>
-      <div class="flex justify-between px-3 py-3">
+      <div class="flex justify-between px-4 py-3">
         <div class="flex gap-2">
           <button type="button" class="flex gap-2">
             <img src="../assets/icon/icon-grayHamburger.svg" alt="모아보기" class="h-[18px] w-[18px]" />

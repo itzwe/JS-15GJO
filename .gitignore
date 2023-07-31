@@ -7,8 +7,8 @@
 .AppleDouble
 .LSOverride
 
-
-
+# compiled css
+main.css
 
 # Thumbnails
 ._*
