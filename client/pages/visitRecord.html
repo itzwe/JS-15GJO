@@ -16,7 +16,7 @@
           <span class="absolute right-5 top-2 rounded-full bg-white px-[5px] py-0 text-xs">1</span>
           <div class="flex pb-3 pl-1 text-white">
             <button class="relative mr-[19px] h-[56px] w-[56px] rounded-full border-2 border-white">
-              <img src="../assets/images/etc/단지공주.jpg" alt="" class="h-[52px] w-[56px] rounded-full" />
+              <img src="../assets/images/etc/단지공주.jpg" alt="프로필" class="h-[52px] w-[56px] rounded-full" />
               <img src="../assets/icon/icon-pencilRound.svg" alt="프로필수정" class="absolute bottom-[-3px] right-[-3px]" />
             </button>
             <div>
@@ -48,14 +48,14 @@
               </ul>
             </div>
           </div>
-          <div class="flex gap-2 p-1 text-center text-xs font-semibold leading-4 text-white">
-            <button class="flex w-44 items-center rounded-lg bg-lightGreen500 px-14 py-[6px]">
-              <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-5 pr-[5px]" />
+          <div class="flex flex-row justify-between gap-2 p-1 text-xs font-semibold leading-4 text-white">
+            <button class="inline-flex px-14 py-1 w-4/6 items-center justify-center-center rounded-lg bg-lightGreen500 hover:bg-lionSecondary">
+              <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-5 mr-[5px]" />
               글쓰기
             </button>
-            <button class="flex w-20 items-center rounded-lg bg-lightGreen500 px-[14px] py-[6px]">
-              <img src="../assets/icon/icon-mission.svg" alt="미션" class="w-5 pr-[5px]" />
-              미션
+            <button class="inline-flex px-4 py-1 w-2/6 items-center justify-center-center rounded-lg bg-lightGreen500 hover:bg-lionSecondary">
+              <img src="../assets/icon/icon-mission.svg" alt="미션" class="w-5 mr-[5px]" />
+              <span>미션</span>
             </button>
           </div>
         </header>
@@ -72,7 +72,7 @@
           </ul>
         </nav>
 
-        <main class="bg-liteGray px-3 py-6 pb-[80px]">
+        <main class="bg-lightGray700 px-3 py-6 pb-[80px]">
           <section>
             <h2 class="font-semibold leading-6">3월 방문</h2>
             <div class="my-4 rounded-lg bg-white p-3">
@@ -117,41 +117,34 @@
               </div>
               <div class="visit-list flex flex-wrap gap-4 text-xs text-lionContent"></div>
               <p class="pt-1 text-xs text-gray-400">곱창전골 &middot; 50,900원</p>
-              <button
-                type="button"
-                class="write-review mt-1 flex items-center gap-1 rounded-lg bg-lionPrimary px-24 py-[6px] text-center text-xs font-semibold leading-4 text-white"
-              >
-                <img src="../assets/icon/icon-pencil.svg" alt="연필" />리뷰 쓰기
+              <button class="write-review mt-5 inline-flex px-24 py-[4px] items-center justify-center-center text-xs font-semibold leading-4 text-white rounded-lg bg-lionPrimary hover:bg-lionSecondary">
+                <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-5 mr-[5px]" />
+                리뷰쓰기
               </button>
             </div>
           </section>
         </main>
-        <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
+        <nav class="fixed bottom-0 w-full max-w-xs h-[70px] bg-white p-2 text-xs">
           <ul class="flex items-center justify-around">
             <li>
               <a class="flex flex-col items-center justify-center" href=""
-                ><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a
-              >
+                ><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
             </li>
             <li>
               <a class="flex flex-col items-center justify-center" href=""
-                ><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a
-              >
+                ><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
             </li>
             <li class="flex flex-col items-center">
               <a class="flex flex-col items-center justify-center" href=""
-                ><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a
-              >
+                ><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
             </li>
             <li class="flex flex-col items-center">
               <a class="flex flex-col items-center justify-center" href=""
-                ><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a
-              >
+                ><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
             </li>
             <li>
               <a class="flex flex-col items-center justify-center" href=""
-                ><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a
-              >
+                ><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
             </li>
           </ul>
         </nav>
