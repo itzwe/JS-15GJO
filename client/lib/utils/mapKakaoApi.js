@@ -2,9 +2,8 @@
 
 import {getNode} from '../dom/getNode.js'
 
-
-export // renderMap 함수 정의
-function renderMap(latitude, longitude,height, node) {
+// renderMap 함수 정의
+export function renderMap(latitude, longitude,height, node) {
     // 지도를 렌더링할 요소를 찾아서 크기를 설정.
     var mapWrapper = getNode(node);
     mapWrapper.style.width = 100 + '%';

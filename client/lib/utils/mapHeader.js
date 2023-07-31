@@ -1,6 +1,6 @@
 import { getNode } from "../dom/getNode.js";
 // Header 상단 고정 일정 스크롤 시 nav header 밑에 고정
-function mapFixHandler(){
+export function mapFixHandler(){
   const header = getNode('#fixed-header');
   const h = getNode('#fixed_title');
   const secondImg = getNode('#second_img');
@@ -8,7 +8,6 @@ function mapFixHandler(){
   const initialNavOffset = nav.offsetTop;
 
   
-
   window.addEventListener("scroll", () => {
     if (window.scrollY > 0) {
       header.classList.add("bg-white");
@@ -45,4 +44,3 @@ function mapFixHandler(){
 
 // script 위치에 따라 안되는 경우도 있어서 DOM 로드 시 함수 동작하게 만들기.
 
-document.addEventListener('DOMContentLoaded', mapFixHandler);
