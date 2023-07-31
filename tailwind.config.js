@@ -15,8 +15,9 @@ module.exports = {
         lightGreen500: '#b9d2b7',
         lightGreen600: '#c8dcc6',
         lightGreen700: '#d7e5d6',//가장 밝은색
-        lightGray:'#F9F9F9',
-        lightGray2: '#A6A6A6',
+        lightGray500: '#6B6B6B',
+        lightGray600:'#A6A6A6',
+        lightGray700: '#F9F9F9',
         darkGray: '#404040',
         lightBlue: '#AAC4FA', // 리뷰 추가
         error: '#F03F40' // 빨간색 강조
@@ -27,7 +28,7 @@ module.exports = {
       },
       fontFamily: {
         'pretendard': ['pretendard']
-      }
+      },
     },
   },
   plugins: [],
