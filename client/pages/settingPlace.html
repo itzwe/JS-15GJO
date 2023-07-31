@@ -1,86 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>관심지역 설정</title>
+    <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
-  <body>
-    <div class="container mx-auto px-4 flex justify-center">
+  <body class="mx-auto max-w-xs font-pretendard">
+    <div class="container flex justify-center px-4">
       <div>
-        <header class="pt-11 px-4 relative border-b">
-          <h1 class="pb-3 font-semibold leading-6 text-center">관심지역 설정</h1>
-          <a href="../setting.html" class="absolute top-11 right-4"><img src="../assets/icon/icon-close.svg" alt="close icon" /></a>
+        <header class="relative border-b px-4 pt-11">
+          <h1 class="pb-3 text-center font-semibold leading-6">관심지역 설정</h1>
+          <a href="./setting.html" class="absolute right-4 top-11"><img src="../assets/icon/icon-close.svg" alt="취소하기" /></a>
         </header>
-        <main class="">
+        <main>
           <section class="px-4 py-2">
-            <h2 class="mb-3 font-semibold leading-6 text-left">👍요즘 많이 찾아봐요</h2>
+            <h2 class="mb-3 text-left font-semibold leading-6">👍요즘 많이 찾아봐요</h2>
           </section>
-          <section class="grid grid-cols-3 gap-4 px-3">
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+          <section class="grid grid-cols-3 gap-4">
+            <h2 class="hidden">관심지역 설정</h2>
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/제주도.png" alt="제주도" />
-              <span class="text-black pt-2 text-xs font-semibold">제주도</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">제주도</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionPrimary text-white font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionPrimary p-4 font-semibold text-white"
+            >
               <img src="../assets/images/city/경주.png" alt="경주" />
               <span class="pt-2 text-xs font-semibold">경주</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="plus check" /></span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="체크" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/전주.png" alt="전주" />
-              <span class="text-black pt-2 text-xs font-semibold">전주</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">전주</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionPrimary text-white font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionPrimary p-4 font-semibold text-white"
+            >
               <img src="../assets/images/city/종로구.png" alt="종로구" />
               <span class="pt-2 text-xs font-semibold">종로구</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="plus check" /></span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="체크" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionPrimary text-white font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionPrimary p-4 font-semibold text-white"
+            >
               <img src="../assets/images/city/해운대.png" alt="해운대" />
               <span class="pt-2 text-xs font-semibold">해운대</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="plus check" /></span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="체크" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/순천.png" alt="순천" />
-              <span class="text-black pt-2 text-xs font-semibold">순천</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">순천</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/강릉.png" alt="강릉" />
-              <span class="text-black pt-2 text-xs font-semibold">강릉</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">강릉</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/광화문.png" alt="광화문" />
-              <span class="text-black pt-2 text-xs font-semibold">광화문</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">광화문</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/광교.png" alt="광교" />
-              <span class="text-black pt-2 text-xs font-semibold">광교</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">광교</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
 
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/춘천.png" alt="춘천" />
-              <span class="text-black pt-2 text-xs font-semibold">춘천</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">춘천</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionTertiary font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionTertiary p-4 font-semibold"
+            >
               <img src="../assets/images/city/포항.png" alt="포항" />
-              <span class="text-black pt-2 text-xs font-semibold">포항</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="plus icon" /></span>
+              <span class="pt-2 text-xs font-semibold text-black">포항</span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
-            <button class="w-24 p-4 bg-lionPrimary text-white font-semibold rounded-xl flex flex-col justify-center items-center relative">
+            <button
+              class="relative flex w-[90px] flex-col items-center justify-center rounded-xl bg-lionPrimary p-4 font-semibold text-white"
+            >
               <img src="../assets/images/city/수원.png" alt="수원" />
               <span class="pt-2 text-xs font-semibold">수원</span>
-              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="check icon" /></span>
+              <span class="absolute right-2 top-2"><img src="../assets/icon/icon-check.svg" alt="체크" /></span>
             </button>
           </section>
-          <a href="./feedPage.html" class="text-center w-80 mt-3 ml-3 px-24 py-3 bg-lionPrimary text-white text-xs rounded-lg absolute ">이대로 저장할래요</a>
+          <a
+            href="./feedPage.html"
+            class="absolute ml-1 mt-3 w-72 rounded-lg bg-lionPrimary px-24 py-3 text-center text-xs text-white"
+            >이대로 저장할래요</a
+          >
         </main>
       </div>
     </div>

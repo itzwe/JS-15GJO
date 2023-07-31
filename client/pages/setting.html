@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lion Place</title>
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body class="font-pretendard">
+    <div class="container mx-auto flex justify-center px-4">
+      <div>
+        <header class="px-4 pt-11">
+          <h1 class="pb-3 font-semibold leading-6">관심지역을 설정해 주세요</h1>
+          <label for="localSearch" class="hidden">원하는 지역을 검색</label>
+          <input
+            type="search"
+            id="localSearch"
+            class="h-6 w-full rounded-lg border border-lionContent px-3 py-2 text-xs"
+            placeholder="원하는 지역을 검색해 보세요"
+          />
+        </header>
+        <main>
+          <section class="px-4 py-2">
+            <h2 class="mb-3 font-semibold leading-6">내 관심지역 <span class="text-lionSecondary">0</span></h2>
+            <div class="rounded-lg bg-gray-50 px-9 py-4 text-center text-xs leading-6 text-lionContent">
+              <p>자주 찾는 동네, 가고 싶은 여행지를 추가하고</p>
+              <p><strong>최신 리뷰</strong>를 모아보세요!</p>
+            </div>
+          </section>
+          <section class="mb-1 pl-4 pt-4">
+            <h2 class="font-semibold leading-6">이런 지역 어때요</h2>
+            <div class="text-xs">👀 COOLION님 좋아하실 것 같아요</div>
+          </section>
+          <section class="grid grid-cols-2 gap-3 px-3">
+            <h2 class="hidden">관심지역 선택</h2>
+            <button class="relative flex flex-col rounded-lg bg-lionPrimary p-3 font-semibold text-white">
+              <span class="text-xs">자주 방문한</span>
+              <span class="pt-1">부천 상동</span>
+              <span class="sr-only absolute right-4 top-6"><img src="../assets/icon/icon-check.svg" alt="체크" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionTertiary p-3 font-semibold">
+              <span class="text-xs text-lionContent">함께 추천하는</span>
+              <span class="pt-1 text-black">부천역</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionTertiary p-3 font-semibold">
+              <span class="text-xs text-lionContent">함께 추천하는</span>
+              <span class="pt-1 text-black">부평역</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionPrimary p-3 font-semibold text-white">
+              <span class="text-xs">함께 추천하는</span>
+              <span class="pt-1">영종도</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-check.svg" alt="체크" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionTertiary p-3 font-semibold">
+              <span class="text-xs text-lionContent">자주 검색한</span>
+              <span class="pt-1 text-black">홍익대</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionTertiary p-3 font-semibold">
+              <span class="text-xs text-lionContent">함께 추천하는</span>
+              <span class="pt-1 text-black">합정역</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionTertiary p-3 font-semibold">
+              <span class="text-xs text-lionContent">함께 추천하는</span>
+              <span class="pt-1 text-black">신촌역</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
+            </button>
+            <button class="relative flex flex-col rounded-lg bg-lionTertiary p-3 font-semibold">
+              <span class="text-xs text-lionContent">함께 추천하는</span>
+              <span class="text-bl pt-1">망리단길</span>
+              <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
+            </button>
+          </section>
+          <a
+            href="./settingPlace.html"
+            class="absolute ml-3 mt-3 w-72 rounded-lg bg-lionPrimary px-24 py-3 text-center text-xs text-white"
+            >이대로 저장할래요</a
+          >
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
