@@ -1,5 +1,5 @@
 {
-  "data": [
+  "rewview": [
     {
       "id": 1,
       "name": "마포곱창타운 연남점",
@@ -63,7 +63,9 @@
         "src": "food/coffee.svg",
         "alt": "아이스아메리카노"
       }
-    },
+    }
+  ],
+  "user": [
     {
       "id": "5",
       "name": "뉴오더 클럽",
@@ -74,106 +76,7 @@
         "src": "food/pizza.svg",
         "alt": "피자"
       }
-    },
-    {
-      "review": "d",
-      "id": "_rqC92N"
-    },
-    {
-      "review": "da",
-      "id": "kuubAbQ"
-    },
-    {
-      "review": "das",
-      "id": "i1ef71o"
-    },
-    {
-      "review": "dasd",
-      "id": "oHj1f8B"
-    },
-    {
-      "review": "dasds",
-      "id": "KpXAlUY"
-    },
-    {
-      "review": "dasdsa",
-      "id": "8yGPu7Y"
-    },
-    {
-      "review": "dasdsad",
-      "id": "BdWsa2z"
-    },
-    {
-      "review": "dasdsada",
-      "id": "dO8CKP8"
-    },
-    {
-      "review": "dasdsadas",
-      "id": "TA07rMb"
-    },
-    {
-      "review": "dasdsadasd",
-      "id": "nAzigmw"
-    },
-    {
-      "review": "dasdsadasds",
-      "id": "Cig4Uue"
-    },
-    {
-      "review": "dasdsadasdsa",
-      "id": "IX7V0gx"
-    },
-    {
-      "review": "dasdsadasdsad",
-      "id": "wiQ63-x"
-    },
-    {
-      "review": "a",
-      "id": "BOuGC3s"
-    },
-    {
-      "review": "as",
-      "id": "U9dZfzu"
-    },
-    {
-      "review": "asd",
-      "id": "I04erem"
-    },
-    {
-      "review": "asds",
-      "id": "lzhJMtN"
-    },
-    {
-      "review": "asdsa",
-      "id": "bBRmNlq"
-    },
-    {
-      "review": "asdsad",
-      "id": "AqKrr-3"
-    },
-    {
-      "review": "asdsads",
-      "id": "KHRy0ZT"
-    },
-    {
-      "review": "asdsadsa",
-      "id": "wIXz_x8"
-    },
-    {
-      "review": "asdsadsad",
-      "id": "GQL3Lrf"
-    },
-    {
-      "review": "asdsadsads",
-      "id": "atWSWA0"
-    },
-    {
-      "review": "asdsadsadsa",
-      "id": "Z-ZLWiO"
-    },
-    {
-      "review": "asdsadsadsa\n",
-      "id": "6B6f9Ud"
     }
-  ]
+  ],
+  "theme": [{}]
 }
