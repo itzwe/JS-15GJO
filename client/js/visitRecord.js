@@ -1,21 +1,22 @@
-import { getNode, insertLast, tiger } from '../lib/index.js';
+import { getNode, insertLast, loadStorage, tiger } from '../lib/index.js';
 
 const visitList = getNode('.visit-list');
 const writeButton = getNode('.write-review');
 
-async function fetchData() {
+async function reviewData() {
   try {
-    const response = await tiger.get('http://localhost:3000/review');
+    const response = await tiger.get('http://localhost:3000/user');
     if (response.ok) {
       const data = await response.data;
-      renderReview(visitList, data[0]);
+
+      renderReview(visitList, data[0].review[0]);
+      console.log(data);
     }
   } catch (error) {
     console.error('에러', error);
   }
 }
-
-fetchData();
+reviewData();
 
 function createReview({name, month, date, menu, price, image, review }) {
   const template = /* html */ `
@@ -40,7 +41,7 @@ function createReview({name, month, date, menu, price, image, review }) {
                     <button class="bg-liteGray rounded px-2 py-[2px]"></button>
                   </div>
                 </div>
-                <img src="../assets/images/${image.src}" alt="${image.alt}" class="h-[72px] w-20" />
+                <img src="../assets/images/${image.src}" alt="${image.alt}" class="h-[72px] w-[80px] object-cover rounded" />
               </div>
               <p class="text-xs text-gray-400">${menu} &middot; ${price}원</p>
               <button
@@ -53,14 +54,6 @@ function createReview({name, month, date, menu, price, image, review }) {
           </section>`;
   return template;
 }
-
 function renderReview(target, data) {
-  insertLast(visitList, createReview(data));
+  insertLast(target, createReview(data));
 }
-
-// function handleWriteButton() {
-//   window.location.href = './visitLike.html';
-// }
-
-// writeButton.addEventListener('click', handleWriteButton);
-

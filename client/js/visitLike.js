@@ -1,78 +1,83 @@
-import { getNode, getNodes, keywordSwiper, saveStorage, tiger } from '../lib/index.js';
+import { addClass, getNode, getNodes, insertLast, keywordSwiper, removeClass, saveStorage, tiger } from '../lib/index.js';
 
-const swiperWrapper = getNode('.swiper-wrapper');
-const reviewTextField = getNode('#reviewTextField');
-const reviewSubmitButton = getNode('.reviewSubmitButton');
-const keywordButton = getNodes('.swiper-slide button');
-const count = getNode('.reviewTextFieldCount');
+const { swiperWrapper, reviewTextField, count, reviewSubmitButton, keywordButtons } = {
+  swiperWrapper: getNode('.swiper-wrapper'),
+  reviewTextField: getNode('#reviewTextField'),
+  count: getNode('.reviewTextFieldCount'),
+  reviewSubmitButton: getNode('.reviewSubmitButton'),
+  keywordButtons: getNodes('.swiper-slide button'),
+};
 
-async function fetchData() {
+async function reviewData() {
   try {
-    const response = await tiger.get('http://localhost:3000/review');
+    const response = await tiger.get('http://localhost:3000/user');
     if (response.ok) {
-      const data = await response.data;
-      const targetId = 1234; // 원하는 id (여기서는 123) 설정
-
-      // id가 123인 데이터 찾기
-      const targetData = data.find(item => item.id === targetId);
-
-      if (targetData) {
-        // id가 123인 데이터의 reviews 값을 변경
-        const newValue = '새로운 리뷰 내용'; // 여기에 새로운 리뷰 내용을 넣으세요
-        targetData.reviews = newValue;
-        saveStorage('review', newValue); // 변경된 리뷰를 로컬 스토리지에 저장 (선택적으로 사용)
-      } else {
-        console.log(`id가 ${targetId}인 데이터를 찾을 수 없습니다.`);
-      }
+      const data = await response.data[0].review[0];
+      createKeyword(swiperWrapper, data);
     }
-  } catch (error) {
-    console.error('에러', error);
+  } catch (err) {
+    console.error('에러', err);
   }
 }
 
+function createKeyword(target, data) {
+  const keywords = data.keywords;
+  const keywordArray = Object.values(keywords);
 
-fetchData();
+  let template = '';
+  for (let i = 0; i < keywordArray.length; i += 4) {
+    const group = keywordArray.slice(i, i + 4);
+    template += `
+      <div class="swiper-slide flex w-56 flex-col items-center text-center text-xs font-semibold leading-[18px] text-white">
+        ${group.map((keyword) => `<button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">${keyword}</button>`).join('')}
+      </div>
+    `;
+  }
 
+  insertLast(target, template);
+}
 
+function handleKeyword(event) {
+  const keywordButton = event.target.closest('.swiper-slide button');
+  if (!keywordButton) return;
 
+  const isClass = keywordButton.classList.contains('bg-lionPrimary');
+
+  if (isClass) {
+    removeClass(keywordButton, 'bg-lionPrimary');
+  } else {
+    addClass(keywordButton, 'bg-lionPrimary');
+
+    keywordButtons.forEach((item) => {
+      if (item !== keywordButton) {
+        removeClass(item, 'bg-lionPrimary');
+      }
+    });
+  }
+
+  const selectedKeyword = keywordButton.textContent.trim();
+  saveStorage('keywords', selectedKeyword ? [selectedKeyword] : []);
+}
 
 async function handleTextField(e) {
   e.preventDefault();
-
   const value = reviewTextField.value;
-  saveStorage('review', value);
-
   const textLength = value.length;
   count.textContent = textLength;
 }
 
-
-async function handleButton(e) {
+function handleButton(e) {
   e.preventDefault();
-
-  const value = reviewTextField.value;
-  saveStorage('review', value);
-
-
-  const url = 'http://localhost:3000/review'; 
-  const body = { 
-    reviews:value,
-   };
-
-  try {
-    const response = await tiger.post(url, body);
-    if (response.ok) {
-      console.log('POST 요청 성공!');
-      fetchData(); // 데이터를 등록한 후에 새로운 데이터를 불러옵니다.
-    } else {
-      console.error('POST 요청 실패!');
-    }
-  } catch (error) {
-    console.error('에러', error);
-  }
+  const URL = './visitRecord.html';
+  window.location.href = URL;
 }
 
-keywordSwiper();
-reviewTextField.addEventListener('input', handleTextField);
-reviewSubmitButton.addEventListener('click', handleButton);
+function render() {
+  reviewData();
+  keywordSwiper();
+  swiperWrapper.addEventListener('click', handleKeyword);
+  reviewTextField.addEventListener('input', handleTextField);
+  reviewSubmitButton.addEventListener('click', handleButton);
+}
 
+render();
