@@ -1,15 +1,15 @@
 {
-  "rewview": [
+  "review": [
     {
-      "id": 1,
-      "name": "마포곱창타운 연남점",
+      "id": 1234,
+      "name": "마포곱창타운",
       "description": "돼지 곱창과 소 곱창을 맛볼 수 있는 곳. 매콤한 양념에 볶 아져 나오는 야채곱창과 곱이 꽉 차 있는 소 곱창 구이를 추천할만하다. 특히 소 곱창은 부추와 함께 구워주는데 그 맛이 가히 일품이다.",
       "month": "2월",
       "date": "2.18.토",
       "location": "마포구 연남동",
       "menu": "한우곱창구이",
       "price": "25,000",
-      "review": "",
+      "reviews": "",
       "keywords": [
         {
           "1": "💚 음식이 맛있어요",
@@ -27,7 +27,7 @@
         }
       ],
       "image": {
-        "src": "food/test.svg",
+        "src": "food/theme-giblets.svg",
         "alt": "곱창"
       }
     },
@@ -63,20 +63,32 @@
         "src": "food/coffee.svg",
         "alt": "아이스아메리카노"
       }
+    },
+    {
+      "reviews": "ㅁㄴㅇ",
+      "id": 1235
+    },
+    {
+      "reviews": "",
+      "id": 1236
+    },
+    {
+      "reviews": "마포곱창연남점",
+      "id": 1237
+    },
+    {
+      "reviews": "123",
+      "id": 1238
+    },
+    {
+      "reviews": "테스트",
+      "id": 1239
     }
   ],
   "user": [
-    {
-      "id": "5",
-      "name": "뉴오더 클럽",
-      "description": "여러가지 맛을 느낄 수 있어서 좋았습니다!!",
-      "visit": "22.7.25.화 방문",
-      "location": "서울시 연남동",
-      "image": {
-        "src": "food/pizza.svg",
-        "alt": "피자"
-      }
-    }
+    {}
   ],
-  "theme": [{}]
+  "theme": [
+    {}
+  ]
 }

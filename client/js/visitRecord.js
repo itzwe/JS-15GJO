@@ -5,7 +5,7 @@ const writeButton = getNode('.write-review');
 
 async function fetchData() {
   try {
-    const response = await tiger.get('http://localhost:3000/data');
+    const response = await tiger.get('http://localhost:3000/review');
     if (response.ok) {
       const data = await response.data;
       renderReview(visitList, data[0]);
@@ -23,7 +23,7 @@ function createReview({name, month, date, menu, price, image, review }) {
             <h2 class="font-semibold leading-6">${month} 방문</h2>
             <div class="my-4 rounded-lg bg-white p-3">
               <div class="flex justify-between gap-1 pb-1">
-                <span class="font-semibold">${name}</span>
+                <span class="font-semibold">${name} 연남점</span>
                 <span class="pt-1 text-xs text-gray-400">${date}&middot;1번째 방문</span>
                 <button class="pl-2">
                   <img src="../assets/icon/icon-heart.svg" alt="하트" />
@@ -34,8 +34,7 @@ function createReview({name, month, date, menu, price, image, review }) {
               </div>
               <div class="flex gap-4 text-xs text-lionContent">
                 <div class="leading-5">
-                  <p class="line-clamp-2 h-[40px] w-[167px] text-ellipsis">
-                  </p>
+                  <p class="line-clamp-2 h-[40px] w-[167px] text-ellipsis">${review}</p>
                   <div class="mt-1">
                     <button class="bg-liteGray rounded px-2 py-[2px]"></button>
                     <button class="bg-liteGray rounded px-2 py-[2px]"></button>
