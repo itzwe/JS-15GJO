@@ -6,10 +6,15 @@
     <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
   </head>
-  <body class="mx-auto max-w-xs font-pretendard">
-    <div class="container mx-auto flex justify-center px-4">
+  <body class="mx-auto max-w-xs font-pretendard leading-relaxed">
+    <div class="container mx-auto flex justify-center px-4 pb-[70px]">
       <div>
-        <header class="px-4 pt-11">
+        <header class="flex h-12 flex-row items-center justify-end px-2 py-2">
+          <button>
+            <img src="../assets/icon/icon-close.svg" alt="취소하기" />
+          </button>
+        </header>
+        <section class="my-3 px-4">
           <h1 class="pb-3 font-semibold leading-6">관심지역을 설정해 주세요</h1>
           <label for="localSearch" class="hidden">원하는 지역을 검색</label>
           <input
@@ -18,20 +23,20 @@
             class="h-6 w-full rounded-lg border border-lionContent px-3 py-2 text-xs"
             placeholder="원하는 지역을 검색해 보세요"
           />
-        </header>
+        </section>
         <main>
-          <section class="px-4 py-2">
+          <section class="my-2 px-4 py-2">
             <h2 class="mb-3 font-semibold leading-6">내 관심지역 <span class="text-lionSecondary">0</span></h2>
-            <div class="rounded-lg bg-gray-50 px-6 py-4 text-center text-xs leading-6 text-lionContent">
-              <p>자주 찾는 동네,가고 싶은 여행지를 추가하고</p>
+            <div class="rounded-lg bg-gray-50 px-4 py-4 text-center text-xs leading-6 text-lionContent">
+              <p>자주 찾는 동네, 가고 싶은 여행지를 추가하고</p>
               <p><strong>최신 리뷰</strong>를 모아보세요!</p>
             </div>
           </section>
-          <section class="mb-1 pl-4 pt-4">
+          <section class="mb-1 pl-4">
             <h2 class="font-semibold leading-6">이런 지역 어때요</h2>
             <div class="text-xs">👀 COOLION님 좋아하실 것 같아요</div>
           </section>
-          <section class="grid grid-cols-2 gap-3 px-3">
+          <section class="mt-5 grid grid-cols-2 gap-3 px-3">
             <h2 class="hidden">관심지역 선택</h2>
             <button class="relative flex flex-col rounded-lg bg-lionPrimary p-3 font-semibold text-white">
               <span class="text-xs">자주 방문한</span>
@@ -74,13 +79,33 @@
               <span class="absolute right-4 top-6"><img src="../assets/icon/icon-plus.svg" alt="플러스" /></span>
             </button>
           </section>
-          <a
-            href="./settingPlace.html"
-            class="absolute ml-3 mt-3 w-[260px] rounded-lg bg-lionPrimary py-3 text-center text-xs text-white"
-            >이대로 저장할래요</a
+          <button
+            onclick="location.href = './settingPlace.html'"
+            class="mt-5 w-full rounded-lg bg-lionPrimary px-24 py-3 text-center text-xs text-white"
           >
+            이대로 저장할래요
+          </button>
         </main>
       </div>
+      <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
+        <ul class="flex items-center justify-around">
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
+          </li>
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
+          </li>
+          <li class="flex flex-col items-center">
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
+          </li>
+          <li class="flex flex-col items-center">
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
+          </li>
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
