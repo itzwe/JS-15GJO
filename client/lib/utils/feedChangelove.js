@@ -1,23 +1,10 @@
-function imageChange(node){
-  let counter = 0;
-    const images = [
-      "../assets/images/icon/icon-love.svg",
-      "../assets/images/icon/icon-love2.svg",
-    ];
-    
-    return () => {
-      counter++;
-      if (counter >= images.length) {
-        counter = 0;
-      }
+import {getNodes} from '../dom/getNode.js'
 
-      node.setAttribute("src", images[counter]);
-    };
-}
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleIcon = document.querySelectorAll(".toggle-icon");
+export function imageChange(node){
 
-  toggleIcon.forEach((item) => {
+  node = getNodes(node);
+
+  node.forEach((item) => {
     item.addEventListener("click", () => {
       if (item.getAttribute("src") === "../assets/icon/icon-love.svg") {
         item.setAttribute("src", "../assets/icon/icon-love2.svg");
@@ -26,7 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-});
+}
+document.addEventListener("DOMContentLoaded", imageChange('.toggle-icon'));
 
 const loadButton = document.querySelector('.alert-feed');
 
