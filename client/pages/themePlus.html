@@ -10,17 +10,17 @@
       type="image/xml+svg"
     />
     <link rel="stylesheet" href="../css/main.css" />
-    <script src="./js/main.js" type="module"></script>
+    <script src="../js/theme/themePlus.js" type="module" defer></script>
     <title>Lion Place</title>
   </head>
 
   <body class="mx-auto max-w-xs font-pretendard leading-relaxed">
-    <div class="flex flex-col relative h-screen pb-[70px]">
-      <div class="bg-darkGray flex-col items-center justify-center pt-3 text-center grow">
+    <div class="flex flex-col h-screen pb-[70px]">
+      <div class="imageContainer flex-col items-center justify-center pt-3 text-center grow">
         <header class="flex h-12 max-w-xs items-center justify-between bg-transparent px-2 py-2">
           <h1 class="sr-only">테마 등록</h1>
-          <button><img src="../assets/icon/icon-left.svg" alt="뒤로가기" /></button>
-          <button class="w-15 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white
+          <button onclick="window.history.back()"><img src="../assets/icon/icon-left.svg" alt="뒤로가기" /></button>
+          <button type="button" class="submitBtn w-15 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white
           hover:bg-lightGreen500 hover:border-transparent">
             <img src="../assets/icon/icon-check-white.svg" alt="등록" />
             <span class="text-xs">등록</span>
@@ -34,37 +34,40 @@
             <div class="relative w-full px-4">
               <label for="title" class="sr-only">제목</label>
               <input
-                class="w-full border-b bg-transparent py-1 text-2xl text-white outline-none placeholder:text-white"
+                class="title w-full border-b bg-transparent py-1 text-2xl text-white outline-none placeholder:text-white"
                 placeholder="제목을 입력해주세요"
+                maxlength="20"
                 type="text"
                 name="title"
                 id="title"
               />
-              <span class="absolute right-4 top-5 text-xs text-lightGray600">필수</span>
+              <span class="title-desc absolute right-4 top-5 text-xs text-lightGray600">필수</span>
               <div class="grow-1 text-right text-xs text-lightGray600">
-                <span class="text-white">0</span>/20
+                <span class="titleCount text-white">0</span>/20
               </div>
             </div>
 
             <div class="relative mt-3 w-full px-4">
-              <label for="explain" class="sr-only">설명</label>
+              <label for="list" class="sr-only">설명</label>
               <input
-                class="w-full border-b bg-transparent py-2 text-xs text-lightGray600 outline-none placeholder:text-lightGray600"
+                class="list w-full border-b bg-transparent py-2 text-xs text-white outline-none placeholder:text-white"
                 placeholder="어떤 리스트인지 설명해주세요"
+                maxlength="100"
                 type="text"
-                name="explain"
-                id="explain"
+                name="list"
+                id="list"
               />
-              <span class="absolute right-4 top-2 text-xs text-lightGray600">선택</span>
+              <span class="list-desc absolute right-4 top-[10px] text-xs text-lightGray600">선택</span>
               <div class="grow-1 text-right text-xs text-lightGray600">
-                <span class="text-white">0</span>/100
+                <span class="listCount text-white">0</span>/100
               </div>
             </div>
 
-            <button class="w-33 mb-5 mt-20 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white">
+            <button type="button" class="imageBtn w-33 mb-5 mt-20 inline-flex h-10 cursor-pointer items-center rounded-3xl border border-solid border-white bg-transparent px-3 py-2 text-white">
+              <input type="file" class="uploadImage hidden" accept="image/*" required multiple>
               <img src="../assets/icon/icon-photo.svg" alt="사진추가" />
               <span class="mx-1 text-base">커버변경</span>
-              <span class="text-xs text-lightGray600">필수</span>
+              <span class="text-xs text-white">필수</span>
             </button>
           </fieldset>
         </form>
@@ -90,7 +93,7 @@
           <p class="py-2 text-xs font-light text-lightGray2">
             내가 작성한 리뷰를 추가해<br />새로운 테마 리스트를 만들어보세요.
           </p>
-          <button class="my-3 inline-flex h-11 w-32 cursor-pointer items-center rounded-3xl bg-lightGreen500 px-4 py-2 text-white hover:bg-lightGreen300">
+          <button onclick="location.href='./reviewChoicePage.html'" class="my-3 inline-flex h-11 w-32 cursor-pointer items-center rounded-3xl bg-lightGreen500 px-4 py-2 text-white hover:bg-lightGreen300">
             <img class="m-0 h-6 w-6" src="../assets/icon/icon-plus-large.svg" alt="추가하기" />
             <span class="text-xs">리뷰 추가하기</span>
           </button>
@@ -98,7 +101,7 @@
 
       </div>
 
-      <nav class="fixed bottom-0 w-full max-w-xs h-[70px] bg-white p-2 text-xs">
+      <nav class="fixed bottom-0 w-full max-w-xs h-[70px] bg-white p-2 text-xs z-50">
         <ul class="flex items-center justify-around">
           <li>
             <a class="flex flex-col items-center justify-center" href=""

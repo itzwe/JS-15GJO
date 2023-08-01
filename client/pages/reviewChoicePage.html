@@ -8,32 +8,32 @@
     <script src="../js/reviewChoicePageMain.js" type="module"></script>
   </head>
   <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
-    <div class="flex max-w-xs flex-col items-center justify-center">
-      <header class="flex w-full items-center justify-between bg-white px-2 py-3 pt-3">
+    <div class="flex flex-col h-screen pb-[70px]">
+      <header class="flex w-full items-center justify-between bg-white px-2 py-2">
         <button type="button">
-          <img src="../assets/icon/icon-back.svg" alt="뒤로가기" class="h-8 w-8" />
+          <img src="../assets/icon/icon-left-black.svg" alt="뒤로가기" class="h-8 w-8" />
         </button>
-        <h1 class="text-base font-black">리뷰 선택</h1>
+        <h1 class="text-base font-semibold">리뷰 선택</h1>
         <button type="button">
           <img src="../assets/icon/icon-close.svg" alt="취소" class="h-6 w-6" />
         </button>
       </header>
 
-      <div class="bg-gray-200">
+      <div class="bg-lightGray700 grow pb-[70px]">
         <div class="flex justify-between px-3 py-3">
-          <div class="flex gap-2">
-            <button type="button" class="flex gap-2">
-              <img src="../assets/icon/icon-hamburger.svg" alt="모아보기" />
+          <div class="flex items-center gap-2">
+            <button type="button" class="inline-flex items-center gap-1">
+              <img src="../assets/icon/icon-hamburger.svg" alt="모아보기" class="h-[18px] w-[18px]" />
               <p class="text-xs font-semibold">전체</p>
             </button>
-            <button class="flex gap-2">
-              <img src="../assets/icon/icon-photo.svg" alt="사진" class="h-[18px] w-[18px]" />
+            <button class="inline-flex items-center gap-1">
+              <img src="../assets/icon/icon-photo-gray.svg" alt="사진" class="h-[18px] w-[18px]" />
               <a href="./themePage.html"><p class="text-xs text-gray-400">사진</p></a>
             </button>
           </div>
-          <button class="flex gap-2">
-            <p class="text-xs text-gray-500">최신순</p>
-            <img src="../assets/icon/icon-down.svg" alt="" />
+          <button class="inline-flex items-center gap-1">
+            <p class="text-xs text-lightGray500">최신순</p>
+            <img src="../assets/icon/icon-down.svg" alt="더보기" />
           </button>
         </div>
 
@@ -104,22 +104,27 @@
         </ul>
       </div>
 
-      <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
+      <nav class="fixed bottom-0 w-full max-w-xs h-[70px] bg-white p-2 text-xs z-50">
         <ul class="flex items-center justify-around">
           <li>
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
+            <a class="flex flex-col items-center justify-center" href=""
+              ><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
           </li>
           <li>
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
+            <a class="flex flex-col items-center justify-center" href=""
+              ><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
           </li>
           <li class="flex flex-col items-center">
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
+            <a class="flex flex-col items-center justify-center" href=""
+              ><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
           </li>
           <li class="flex flex-col items-center">
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
+            <a class="flex flex-col items-center justify-center" href=""
+              ><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
           </li>
           <li>
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
+            <a class="flex flex-col items-center justify-center" href=""
+              ><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
           </li>
         </ul>
       </nav>
