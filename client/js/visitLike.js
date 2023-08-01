@@ -1,11 +1,11 @@
 import { addClass, getNode, handleKeyword, keywordSwiper, removeClass, renderKeywords, tiger } from '../lib/index.js';
 
-const { 
+const {
   URL,
-  count, 
-  reviewAlert, 
-  swiperWrapper, 
-  reviewTextField, 
+  count,
+  reviewAlert,
+  swiperWrapper,
+  reviewTextField,
   reviewAlertClose,
   reviewSubmitButton
   } = {
@@ -52,7 +52,7 @@ async function handleButton(e) {
     const vitiedData = data.visited[0];
     vitiedData.review = value;
 
-    const response = await tiger.patch(`${URL}/1`, data);
+    const response = await tiger.patch(`${URL}/1690888344809`, data);
     if (response.ok) {
       window.location.href = './visitRecord.html';
     }

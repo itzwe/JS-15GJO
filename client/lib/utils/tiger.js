@@ -10,7 +10,8 @@ const defaultOptions = {
   redirect:'follow',
   referrerPolicy:'no-referrer',
   headers:{
-    'Content-Type':'application/json; charset=UTF-8'
+    'Content-Type':'application/json; charset=UTF-8',
+    'Access-Control-Allow-Origin': '*'
   }
 }
 
@@ -70,6 +71,7 @@ tiger.delete = (url,options) =>{
     ...options
   })
 }
+
 tiger.patch = (url,body,options) =>{
   return tiger({
     method:'PATCH',

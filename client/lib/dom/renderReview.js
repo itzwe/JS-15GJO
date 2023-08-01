@@ -46,6 +46,8 @@ export function createReview({ name, month, date, menu, price, image, review }) 
   return template;
 }
 
+
+
 export async function renderReview(target, data) {
   insertLast(target, createReview(data));
 }

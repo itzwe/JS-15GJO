@@ -1,4 +1,4 @@
-// /* global gsap */
+/* global gsap */
 
 export function shakeForm() {
   gsap.to('form', {

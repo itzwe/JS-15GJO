@@ -60,7 +60,7 @@ export function renderMap(latitude, longitude, height, node, keyword) {
         infowindow.setContent(content);
         infowindow.open(map, marker);
 
-        
+
       }
     };
 
