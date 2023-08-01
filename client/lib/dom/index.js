@@ -9,4 +9,5 @@ export * from './bindEvent.js';
 export * from './getInputValue.js';
 export * from './clearContents.js';
 export * from './controlElement.js';
-
+export * from './renderReview.js';
+export * from './renderTheme.js';
