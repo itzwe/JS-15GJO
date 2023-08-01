@@ -10,7 +10,7 @@ export function createReview({ name, month, date, menu, price, image, review }) 
   <h2 class="font-semibold leading-6">${month} 방문</h2>
   <div class="my-4 rounded-lg bg-white p-3">
     <div class="flex justify-between gap-1 pb-1">
-      <span class="font-semibold">${name} 연남점</span>
+      <span class="font-semibold whitespace-nowrap">${name} 연남점</span>
       <span class="pt-1 text-xs text-gray-400">${date.slice(3)}&middot;1번째 방문</span>
       <button class="pl-2">
         <img src="../assets/icon/icon-heart.svg" alt="하트" />
