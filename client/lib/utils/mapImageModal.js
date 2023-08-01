@@ -34,6 +34,7 @@ window.addEventListener('click', (e) => {
   }
 });
 window.addEventListener("keydown", (e) => {
+  const modal = getNode('.modal');
   if (modal.style.display === "block") {
     if (e.key === "ArrowRight") {
       nextImage();
