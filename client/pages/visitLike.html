@@ -44,7 +44,7 @@
     </div>
 
     <form action="./visitRecord.html" method="POST" id="reviewForm">
-      <div class="mt-8 h-16 px-4">
+      <div class="relative mt-8 h-16 px-4">
         <h1 class="pb-4 text-center font-semibold">리뷰를 남겨주세요</h1>
         <button type="button" class="mx-auto flex items-center justify-center gap-1 rounded border p-3 text-center text-xs font-semibold">
           <img src="../assets/icon/icon-photoBlack.svg" alt="사진" />사진추가 <span class="text-gray-400">최대 20장</span>
@@ -68,9 +68,9 @@
           <button type="submit" class="reviewSubmitButton rounded bg-lionPrimary px-7 py-3 font-semibold text-white">등록하기</button>
         </div>
       </div>
-      <div class="review-alert fixed bottom-0 left-0 right-0 top-0 z-50 flex hidden items-center justify-center">
+      <div class="review-alert relative z-50 hidden">
         <div
-          class="relative flex h-20 w-64 items-center justify-center rounded-lg border-2 border-lightGreen500 bg-lightGreen700 p-6 text-center text-sm font-semibold text-lightGray500"
+          class="absolute -top-20 right-8 flex h-20 w-64 items-center justify-center rounded-lg border-2 border-lightGreen500 bg-lightGreen700 p-6 text-center text-sm font-semibold text-lightGray500"
         >
           리뷰를 작성해 주세요!
           <button type="button" class="review-alertClose ml-4 text-white">
@@ -79,7 +79,6 @@
         </div>
       </div>
     </form>
-
     <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
       <ul class="flex items-center justify-around">
         <li>
