@@ -29,27 +29,7 @@
         <span class="text-xs leading-4 text-gray-400">이 장소에 어울리는 키워드를 골라주세요.</span>
       </div>
       <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide flex w-56 flex-col items-center text-center text-xs font-semibold leading-[18px] text-white">
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">💚 음식이 맛있어요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">💇‍♀️ 재료가 신선해요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">🌹 양이 많아요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">😎 맛있어요</button>
-          </div>
-          <div class="swiper-slide flex w-56 flex-col items-center text-center text-xs font-semibold leading-[18px] text-white">
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">🔍 사장님이 친절해요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">🤲 손이 빨라요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">💆‍♀️ 매장이 넓어요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">📋 아이가 좋아해요</button>
-          </div>
-
-          <div class="swiper-slide flex w-56 flex-col items-center text-center text-xs font-semibold leading-[18px] text-white">
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">💵 가격이 합리적이에요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">💎 비싼 만큼 가치가 있어요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">📦 좋은 제품을 사용해요</button>
-            <button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">🚗 주차하기 편해요</button>
-          </div>
-        </div>
+        <div class="swiper-wrapper"></div>
 
         <div class="flex pt-4">
           <button type="button" class="swiper-prev">
@@ -62,6 +42,7 @@
         </div>
       </div>
     </div>
+
     <form action="./visitRecord.html" method="POST" id="reviewForm">
       <div class="mt-8 h-16 px-4">
         <h1 class="pb-4 text-center font-semibold">리뷰를 남겨주세요</h1>
@@ -87,7 +68,18 @@
           <button type="submit" class="reviewSubmitButton rounded bg-lionPrimary px-7 py-3 font-semibold text-white">등록하기</button>
         </div>
       </div>
+      <div class="review-alert fixed bottom-0 left-0 right-0 top-0 z-50 flex hidden items-center justify-center">
+        <div
+          class="relative flex h-20 w-64 items-center justify-center rounded-lg border-2 border-lightGreen500 bg-lightGreen700 p-6 text-center text-sm font-semibold"
+        >
+          리뷰를 작성해 주세요!
+          <button type="button" class="review-alertClose ml-4 text-white">
+            <img src="../assets/icon/icon-close.svg" alt="닫기" class="absolute right-3 top-3" />
+          </button>
+        </div>
+      </div>
     </form>
+
     <nav class="fixed bottom-0 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
       <ul class="flex items-center justify-around">
         <li>

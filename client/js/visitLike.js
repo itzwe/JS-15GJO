@@ -1,26 +1,62 @@
 import { addClass, getNode, getNodes, insertLast, keywordSwiper, removeClass, saveStorage, tiger } from '../lib/index.js';
 
-const { swiperWrapper, reviewTextField, count, reviewSubmitButton, keywordButtons } = {
+const { swiperWrapper, keywordButtons, reviewTextField, count, reviewSubmitButton, reviewAlert, reviewAlertClose, URL } = {
   swiperWrapper: getNode('.swiper-wrapper'),
+  keywordButtons: getNodes('.swiper-slide button'),
   reviewTextField: getNode('#reviewTextField'),
   count: getNode('.reviewTextFieldCount'),
   reviewSubmitButton: getNode('.reviewSubmitButton'),
-  keywordButtons: getNodes('.swiper-slide button'),
+  URL: 'http://localhost:3000/user',
+  reviewAlert: getNode('.review-alert'),
+  reviewAlertClose: getNode('.review-alertClose'),
 };
 
 async function reviewData() {
   try {
-    const response = await tiger.get('http://localhost:3000/user');
+    const response = await tiger.get(URL);
     if (response.ok) {
-      const data = await response.data[0].review[0];
-      createKeyword(swiperWrapper, data);
+      const data = response.data[0].review[0];
+      insertLast(swiperWrapper, createKeyword(data));
+      return data;
     }
   } catch (err) {
     console.error('에러', err);
   }
 }
 
-function createKeyword(target, data) {
+async function handleTextField() {
+  // saveStorage('review', value);
+  const value = reviewTextField.value;
+  const textLength = value.length;
+  count.textContent = textLength;
+}
+
+async function handleButton(e) {
+  e.preventDefault();
+  const value = reviewTextField.value;
+  const data = await reviewData();
+
+  if (!value) {
+    removeClass(reviewAlert, 'hidden');
+    return;
+  }
+
+  data.review = reviewTextField.value;
+  console.log(data);
+
+  const postResponse = await tiger.post(URL, {
+    data,
+  });
+
+  if (postResponse.ok) {
+    console.log('데이터 수정 성공');
+    // window.location.href = './visitRecord.html';
+  } else {
+    console.log('데이터 수정 실패');
+  }
+}
+
+function createKeyword(data) {
   const keywords = data.keywords;
   const keywordArray = Object.values(keywords);
 
@@ -34,42 +70,40 @@ function createKeyword(target, data) {
     `;
   }
 
-  insertLast(target, template);
+  return template;
 }
+
+const maxKeyword = 5;
+const selectedKeywords = [];
 
 function handleKeyword(event) {
-  const keywordButton = event.target.closest('.swiper-slide button');
-  if (!keywordButton) return;
+  const target = event.target.closest('.swiper-slide button');
+  if (!target) return;
 
-  const isClass = keywordButton.classList.contains('bg-lionPrimary');
+  const isClass = target.classList.contains('bg-lionPrimary');
 
   if (isClass) {
-    removeClass(keywordButton, 'bg-lionPrimary');
+    removeClass(target, 'bg-lionPrimary');
+    const selectedKeyword = target.textContent.trim();
+    const index = selectedKeywords.indexOf(selectedKeyword);
+    if (index !== -1) {
+      selectedKeywords.splice(index, 1);
+    }
   } else {
-    addClass(keywordButton, 'bg-lionPrimary');
+    if (selectedKeywords.length < maxKeyword) {
+      const selectedKeyword = target.textContent.trim();
+      selectedKeywords.push(selectedKeyword);
+      addClass(target, 'bg-lionPrimary');
 
-    keywordButtons.forEach((item) => {
-      if (item !== keywordButton) {
-        removeClass(item, 'bg-lionPrimary');
-      }
-    });
+      keywordButtons.forEach((item) => {
+        if (item !== target) {
+          removeClass(item, 'bg-lionPrimary');
+        }
+      });
+    }
   }
 
-  const selectedKeyword = keywordButton.textContent.trim();
-  saveStorage('keywords', selectedKeyword ? [selectedKeyword] : []);
-}
-
-async function handleTextField(e) {
-  e.preventDefault();
-  const value = reviewTextField.value;
-  const textLength = value.length;
-  count.textContent = textLength;
-}
-
-function handleButton(e) {
-  e.preventDefault();
-  const URL = './visitRecord.html';
-  window.location.href = URL;
+  saveStorage('keywords', selectedKeywords);
 }
 
 function render() {
@@ -78,6 +112,10 @@ function render() {
   swiperWrapper.addEventListener('click', handleKeyword);
   reviewTextField.addEventListener('input', handleTextField);
   reviewSubmitButton.addEventListener('click', handleButton);
+  reviewAlertClose.addEventListener('click', () => {
+    addClass(reviewAlert, 'hidden');
+  });
+  
 }
 
 render();
