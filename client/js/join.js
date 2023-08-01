@@ -1,5 +1,5 @@
 
-import { addClass, getNode, removeClass,idReg, pwReg, emailReg, shake, tiger} from "../lib/index.js";
+import { addClass, getNode, removeClass,idReg, pwReg, emailReg, shakeForm, tiger} from "../lib/index.js";
 
 const userId = getNode('#userId');
 const userPw = getNode('#userPass');
@@ -103,7 +103,7 @@ async function joinButton(e) {
   }
   else{
     removeClass(reEnter,'hidden')
-    shake.restart()
+    shakeForm().restart()
   }
 
 }
