@@ -70,7 +70,14 @@ tiger.delete = (url,options) =>{
     ...options
   })
 }
-
+tiger.patch = (url,body,options) =>{
+  return tiger({
+    method:'PATCH',
+    url,
+    body:JSON.stringify(body),
+    ...options
+  })
+}
 
 
 

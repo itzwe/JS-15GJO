@@ -13,14 +13,14 @@ async function reviewData() {
     const response = await tiger.get(URL);
     if (response.ok) {
       const data = await response.data;
-      renderReview(visitList, data[0].review[0]);
+      renderReview(visitList, data[0].visited[0]);
     }
   } catch (err) {
     console.error('에러', err);
   }
 }
-
 reviewData();
+
 
 function createReview({ name, month, date, menu, price, image, review }) {
   const template = /* html */ `
@@ -41,8 +41,8 @@ function createReview({ name, month, date, menu, price, image, review }) {
       <div class="leading-5">
         <p class="line-clamp-2 h-[40px] w-[167px] text-ellipsis">${review}</p>
         <div class="mt-1">
-          <button class="bg-liteGray rounded px-2 py-[2px]">${keywordValue.length > 0 ? keywordValue[0] : ''}</button>
-          ${keywordValue.length > 0 ? `<button class="bg-liteGray rounded">✨+<span class="like">2</span></button>` : ''}
+          <button class="bg-lightGray700 rounded px-2 py-[2px]">${keywordValue.length > 0 ? keywordValue[0] : ''}</button>
+          ${keywordValue.length > 0 ? `<button class="bg-lightGray700 rounded px-1 py-[2px]">❤️+<span class="like">2</span></button>` : ''}
         </div>
       </div>
       <img src="../assets/images/${image.src}" alt="${image.alt}" class="h-[72px] w-[80px] rounded object-cover" />

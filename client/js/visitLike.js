@@ -15,7 +15,7 @@ async function reviewData() {
   try {
     const response = await tiger.get(URL);
     if (response.ok) {
-      const data = response.data[0].review[0];
+      const data = response.data[0];
       insertLast(swiperWrapper, createKeyword(data));
       return data;
     }
@@ -24,8 +24,7 @@ async function reviewData() {
   }
 }
 
-async function handleTextField() {
-  // saveStorage('review', value);
+function handleTextField() {
   const value = reviewTextField.value;
   const textLength = value.length;
   count.textContent = textLength;
@@ -34,25 +33,18 @@ async function handleTextField() {
 async function handleButton(e) {
   e.preventDefault();
   const value = reviewTextField.value;
-  const data = await reviewData();
+  try {
+    const data = await reviewData();
+    const vitiedData = data.visited[0];
+    vitiedData.review = value;
 
-  if (!value) {
-    removeClass(reviewAlert, 'hidden');
-    return;
-  }
-
-  data.review = reviewTextField.value;
-  console.log(data);
-
-  const postResponse = await tiger.post(URL, {
-    data,
-  });
-
-  if (postResponse.ok) {
-    console.log('데이터 수정 성공');
-    // window.location.href = './visitRecord.html';
-  } else {
-    console.log('데이터 수정 실패');
+    const response = await tiger.patch(`${URL}/1`, data);
+    if (response.ok) {
+      window.location.href = './visitRecord.html';
+      console.log(data);
+    }
+  } catch (err) {
+    console.error(err);
   }
 }
 
@@ -115,7 +107,6 @@ function render() {
   reviewAlertClose.addEventListener('click', () => {
     addClass(reviewAlert, 'hidden');
   });
-  
 }
 
 render();
