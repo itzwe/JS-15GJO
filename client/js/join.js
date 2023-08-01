@@ -1,14 +1,12 @@
-/* global gsap */
 
-import { addClass, getNode, removeClass,idReg, pwReg,emailReg} from "../lib/index.js";
-
+import { addClass, getNode, removeClass,idReg, pwReg, emailReg, shake, tiger} from "../lib/index.js";
 
 const userId = getNode('#userId');
 const userPw = getNode('#userPass');
 const reUserPw = getNode('#reUserPass');
 const userEmail = getNode('#userEmail');
 const joinBtn = getNode('.joinBtn');
-
+const reEnter = getNode('.reEnter')
 
 //상태변수
 let idPass = false;
@@ -59,7 +57,7 @@ function handleCheckPw() {
 function handleCheckRePw() {
   const value = this.value;
 
-  if(pwReg(value) || value === userPw.value){
+  if(pwReg(value) && value === userPw.value){
     removeClass('.checkPw2','hidden')
     rePwPass = true;
   }else{
@@ -79,58 +77,40 @@ function handleCheckEmail() {
   }
 }
 
-const shake = gsap.to('form',{
-  duration:0.1,
-  x:-8,
-  repeat:5,
-  yoyo:true,
-  clearProp:'x',
-  paused:true
-})
 
-function joinButton(e) {
+
+async function joinButton(e) {
   e.preventDefault()
-  // const id = userId.value;
-  // console.log(id);
 
-  if(idPass !== true){
-    console.log('아이디를 다시 입력해주세요.');
-    shake.restart()
-  }
-
-  if(pwPass !== true){
-    console.log('비밀번호를 다시 입력해주세요.');
-    shake.restart()
-  }
-
-  if(emailPass !== true){
-    console.log('이메일 형식으로 다시 입력해주세요.');
-    shake.restart()
-  }
-
-  if(rePwPass !== true){
-    console.log('입력하신 비밀번호와 같지 않습니다.');
-    shake.restart()
-  }
-
-
+  const id = userId.value;
+  const pw = userPw.value;
+  const email = userEmail.value;
+  const uniqueId = Date.now();
 
   if(idPass === true && pwPass === true && emailPass == true && rePwPass === true){
-    addClass(joinBtn,'border-lionSecondary');
-    window.location.href='../pages/login.html';
+
+    addClass(reEnter,'hidden');
+    
+    //data.json에(통신) 회원가입정보 넣기
+    tiger.post('http://localhost:3000/user',{    
+      id:`${uniqueId}`,
+      userId:`${id}`,
+      userPwd:`${pw}`,
+      userEmail:`${email}`,});
+
+    location.href='login.html';
+
   }
-
-
-
+  else{
+    removeClass(reEnter,'hidden')
+    shake.restart()
+  }
 
 }
 
-//아이디.이메일.비밀번호.확인까지 써져야 가입하기버튼이 활성화된다
 
-
-
-userId.addEventListener('input',handleCheckId)
-userPw.addEventListener('input',handleCheckPw)
-reUserPw.addEventListener('input',handleCheckRePw)
-userEmail.addEventListener('input',handleCheckEmail)
-joinBtn.addEventListener('click',joinButton)
+userId.addEventListener('input',handleCheckId);
+userPw.addEventListener('input',handleCheckPw);
+reUserPw.addEventListener('input',handleCheckRePw);
+userEmail.addEventListener('input',handleCheckEmail);
+joinBtn.addEventListener('click',joinButton);
