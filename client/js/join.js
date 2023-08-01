@@ -1,6 +1,5 @@
 
 import { addClass, getNode, removeClass,idReg, pwReg, emailReg, shake, tiger} from "../lib/index.js";
-import { goBack } from "./common/common.js";
 
 const userId = getNode('#userId');
 const userPw = getNode('#userPass');
@@ -8,7 +7,6 @@ const reUserPw = getNode('#reUserPass');
 const userEmail = getNode('#userEmail');
 const joinBtn = getNode('.joinBtn');
 const reEnter = getNode('.reEnter')
-const backBtn = getNode('.backBtn');
 
 //상태변수
 let idPass = false;
@@ -111,9 +109,8 @@ async function joinButton(e) {
 }
 
 
-userId.addEventListener('input',handleCheckId)
-userPw.addEventListener('input',handleCheckPw)
-reUserPw.addEventListener('input',handleCheckRePw)
-userEmail.addEventListener('input',handleCheckEmail)
-joinBtn.addEventListener('click',joinButton)
-backBtn.addEventListener('click',goBack);
+userId.addEventListener('input',handleCheckId);
+userPw.addEventListener('input',handleCheckPw);
+reUserPw.addEventListener('input',handleCheckRePw);
+userEmail.addEventListener('input',handleCheckEmail);
+joinBtn.addEventListener('click',joinButton);

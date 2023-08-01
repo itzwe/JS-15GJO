@@ -1,84 +1,169 @@
 {
-  "products": [
+  "user": [
     {
-      "id": "product-rksk",
-      "name": "[대구 반할만떡] 유부호만두",
-      "description": "유부로 속을 든든히 채운 군만두",
-      "price": 6900,
-      "saleRatio": 0.24,
-      "salePrice": 5244,
-      "image": {
-        "thumbnail": "ubuho/thumbnail.jpg",
-        "view": "ubuho/detail_view.jpg",
-        "banner": "ubuho/detail_banner.jpg",
-        "info": "ubuho/detail_info.jpg",
-        "alt": "유부호 만두"
-      },
-      "stock": 5
-    },
-    {
-      "id": "product-ekfk",
-      "name": "[풀무원] 탱탱쫄면 (4개입)",
-      "description": "튀기지 않아 부드럽고 매콤한",
-      "price": 4980,
-      "saleRatio": 0,
-      "salePrice": 0,
-      "image": {
-        "thumbnail": "tangtang/thumbnail.jpg",
-        "view": "tangtang/detail_view.jpg",
-        "banner": "tangtang/detail_banner.jpg",
-        "info": "tangtang/detail_info.jpg",
-        "alt": "풀무원 탱탱쫄면"
-      },
-      "stock": 10
-    },
-    {
-      "id": "product-akqk",
-      "name": "[홍대주꾸미] 주꾸미 볶음 300g (냉동)",
-      "description": "매콤달콤한 마력의 밥도둑",
-      "price": 7900,
-      "saleRatio": 0.13,
-      "salePrice": 6800,
-      "image": {
-        "thumbnail": "jukkumi/thumbnail.jpg",
-        "view": "jukkumi/detail_view.jpg",
-        "banner": "jukkumi/detail_banner.jpg",
-        "info": "jukkumi/detail_info.jpg",
-        "alt": "홍대 주꾸미"
-      },
-      "stock": 8
-    },
-    {
-      "id": "product-tkwk",
-      "name": "[강남면옥] 소갈비찜",
-      "description": "보는 맛과 먹는 맛 모두 푸짐",
-      "price": 29800,
-      "saleRatio": 0,
-      "salePrice": 0,
-      "image": {
-        "thumbnail": "kangnam/thumbnail.jpg",
-        "view": "kangnam/detail_view.jpg",
-        "banner": "kangnam/detail_banner.jpg",
-        "info": "kangnam/detail_info.jpg",
-        "alt": "강남면옥 소갈비찜"
-      },
-      "stock": 2
-    },
-    {
-      "id": "product-ckzk",
-      "name": "[Kalry's] 한돈 삼겹 베이컨",
-      "description": "무항생제 한돈 삼겹살의 고소한 풍미 그대로",
-      "price": 4500,
-      "saleRatio": 0.25,
-      "salePrice": 3375,
-      "image": {
-        "thumbnail": "bacon/thumbnail.jpg",
-        "view": "bacon/detail_view.jpg",
-        "banner": "bacon/detail_banner.jpg",
-        "info": "bacon/detail_info.jpg",
-        "alt": "칼리 한돈 삼겹 베이컨"
-      },
-      "stock": 13
+      "id": 1,
+      "userId": "sunyong",
+      "userPwd": "sunyong1234@",
+      "userEmail": "sunyong@naver.com",
+      "theme": [
+        {
+          "title": "연남/합정 데이트",
+          "list": "데이트 코스 모음"
+        }
+      ],
+      "visited": [
+        {
+          "id": 1,
+          "name": "마포곱창타운",
+          "description": "돼지 곱창과 소 곱창을 맛볼 수 있는 곳. 매콤한 양념에 볶 아져 나오는 야채곱창과 곱이 꽉 차 있는 소 곱창 구이를 추천할만하다. 특히 소 곱창은 부추와 함께 구워주는데 그 맛이 가히 일품이다.",
+          "month": "2월",
+          "date": "22.2.18.토",
+          "location": "마포구 연남동",
+          "menu": "한우곱창구이",
+          "price": "25,000",
+          "review": "주말엔 매일 줄 서있어서 먹을 수가 없었는데 평일에 다행히 갈 수 있어서 너무 좋았어요!!!",
+          "image": {
+            "src": "food/theme-giblets.svg",
+            "alt": "곱창"
+          },
+          "keywords": [
+            "💚 음식이 맛있어요",
+            "💇‍♀️ 재료가 신선해요",
+            "🌹 양이 많아요",
+            "😎 맛있어요",
+            "📦 국내산을 사용해요",
+            "🔍 사장님이 친절해요",
+            "🤲 손이 빨라요",
+            "💆‍♀️ 매장이 넓어요",
+            "📋 아이가 좋아해요",
+            "💵 가격이 합리적이에요",
+            "💎 비싼 만큼 맛있어요",
+            "🚗 주차하기 편해요"
+          ],
+          "position": {
+            "lat": 37.5590903,
+            "lng": 126.9224474
+          },
+          "keyword": "음식점"
+        },
+        {
+          "id": 2,
+          "name": "후타츠 홍대본점",
+          "description": "홍대에 있는 소바중에 제일 맛있어요!!!",
+          "date": "22.4.1.토",
+          "location": "서울시 서교동",
+          "review": "홍대에 갈 곳이 없다면..........후타츠를 가보는게 어떨까요? 후타츠 존맛탱.................",
+          "image": {
+            "src": "food/theme-noodle.svg",
+            "alt": "소바"
+          },
+          "keywords": {
+            "1": "💚 음식이 맛있어요",
+            "2": "💇‍♀️ 재료가 신선해요",
+            "3": "🌹 양이 많아요",
+            "4": "😎 맛있어요"
+          },
+          "position": {
+            "lat": 37.549391,
+            "lng": 126.921735
+          },
+          "keyword": "후타츠"
+        },
+        {
+          "id": 3,
+          "name": "마노아",
+          "description": "피자가 도우도 얇은데 치즈가 그냥 가득하니 아주 존맛탱이었습니다.",
+          "date": "22.12.14.토",
+          "location": "제주시 구좌읍",
+          "review": "피자가 맛없을 수가 있나요? 이건 맛없없이죠 그냥 존맛탱입니다. 또 가고 싶어요 ㅠㅠㅠㅠㅠㅠㅠ",
+          "image": {
+            "src": "food/theme-cheese-pizza.svg",
+            "alt": "치즈피자"
+          },
+          "keywords": [
+            "💇‍♀️ 재료가 신선해요",
+            "🌹 양이 많아요",
+            "😎 맛있어요",
+            "💵 가격이 합리적이에요",
+            "💎 비싼 만큼 맛있어요",
+            "🚗 주차하기 편해요"
+          ],
+          "position": {
+            "lat": 33.518724,
+            "lng": 126.883446
+          },
+          "keyword": "음식점"
+        },
+        {
+          "id": 4,
+          "name": "허니바람",
+          "description": "화성에 있는 커피중 제일 맛있습니다!",
+          "date": "22.11.11.금",
+          "location": "화성시 진안동",
+          "review": "허니허니허니~ 바람이 불어옵니다. 화성시에 있는 카페로 노란색의 인테리어가 인상적입니다.",
+          "image": {
+            "src": "food/theme-coffee.svg",
+            "alt": "아이스아메리카노"
+          },
+          "keywords": [
+            "📋 아이가 좋아해요",
+            "💵 가격이 합리적이에요",
+            "💎 비싼 만큼 맛있어요",
+            "🚗 주차하기 편해요"
+          ],
+          "position": {
+            "lat": 37.214879,
+            "lng": 127.038867
+          },
+          "keyword": "카페"
+        },
+        {
+          "id": 5,
+          "name": "뉴오더 클럽",
+          "description": "여러가지 맛을 느낄 수 있어서 좋았습니다!!",
+          "date": "22.7.25.화",
+          "location": "서울시 연남동",
+          "review": "저의 위시리스트였습니다....또간집 딱 기대했습니다. 분위기도 힙하고 그냥 힙의 성지죠 힙힙힙! 그래서 더 좋았어요!",
+          "image": {
+            "src": "food/theme-pizza.svg",
+            "alt": "피자"
+          },
+          "keywords": [
+            "📦 좋은 제품을 사용해요",
+            "🔍 사장님이 친절해요",
+            "🤲 손이 빨라요",
+            "💆‍♀️ 매장이 넓어요",
+            "📋 아이가 좋아해요",
+            "💵 가격이 합리적이에요"
+          ],
+          "position": {
+            "lat": 37.561051,
+            "lng": 126.92451
+          },
+          "keyword": "음식점"
+        },
+        {
+          "id": 6,
+          "name": "기린 작업실",
+          "description": "와플과 아이스크림의 조화가 좋았습니다!",
+          "date": "22.6.25.화",
+          "location": "서울시 신설동",
+          "review": "지나가다 보고 너무 예뻐서 저장해 놓았다가 이번에 가게 되었는데 너무 예쁘고 좋았어요. 분위기도 힙하고 새로 생겼는데 오래 동안 오픈 하시더라구요! 그래서 더 좋았어요!",
+          "image": {
+            "src": "food/theme-waffle.svg",
+            "alt": "와플"
+          },
+          "keywords": [
+            "😎 맛있어요",
+            "📦 좋은 제품을 사용해요"
+          ],
+          "position": {
+            "lat": 37.587047,
+            "lng": 126.919527
+          },
+          "keyword": "카페"
+        }
+      ]
     }
   ]
 }
