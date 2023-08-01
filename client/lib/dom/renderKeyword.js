@@ -1,8 +1,9 @@
 import { insertLast } from './insert.js';
 
 export function createKeyword(data) {
-  const keywords = data.keywords;
+  const keywords = data.keywords || [];
   const keywordArray = Object.values(keywords);
+
 
   let template = '';
   for (let i = 0; i < keywordArray.length; i += 4) {
