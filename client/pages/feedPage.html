@@ -6,7 +6,6 @@
     <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../lib/utils/feedChangelove.js" type="module"></script>
-    <script src="../lib/utils/feddKaKaoApi.js"></script>
   </head>
   <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
     <div class="flex items-center justify-center">
@@ -91,19 +90,19 @@
           <section>
             <ul class="flex justify-center gap-1 px-4 pt-2 text-sm">
               <li class="rounded-2xl bg-lightGreen500 px-[5px] py-1 text-white">
-                <button type="button">음식</button>
+                <button type="button" class="whitespace-nowrap">음식</button>
               </li>
               <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">아이와 함께</button>
+                <button type="button" class="whitespace-nowrap">아이와 함께</button>
               </li>
               <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">간식</button>
+                <button type="button" class="whitespace-nowrap">간식</button>
               </li>
               <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">문화예술</button>
+                <button type="button" class="whitespace-nowrap">문화예술</button>
               </li>
               <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button">음료</button>
+                <button type="button" class="whitespace-nowrap">음료</button>
               </li>
             </ul>
           </section>
@@ -153,6 +152,25 @@
           </div>
         </main>
       </div>
+      <nav class="fixed bottom-0 z-50 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
+        <ul class="flex items-center justify-around">
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
+          </li>
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
+          </li>
+          <li class="flex flex-col items-center">
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
+          </li>
+          <li class="flex flex-col items-center">
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
+          </li>
+          <li>
+            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>
