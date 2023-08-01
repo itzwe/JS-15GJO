@@ -4,7 +4,7 @@ const images  = getNodes('.modal-image');
 const modal = getNode('.modal'); 
 const modalImage = getNode('.modal-i'); 
 const close = getNode('.close');
-
+const container = getNode('.map-container');
 let currentIndex = 0;
 
 export function setModalImage(index) {
@@ -28,18 +28,38 @@ images.forEach((image, index) => {
     modal.style.display = 'block';
   });
 });
-window.addEventListener('click', (e) => {
-  if (e.target === close) {
-    modal.style.display = 'none';
-  }
-});
-window.addEventListener("keydown", (e) => {
-  const modal = getNode('.modal');
-  if (modal.style.display === "block") {
-    if (e.key === "ArrowRight") {
-      nextImage();
-    } else if (e.key === "ArrowLeft") {
-      prevImage();
+
+
+if(close) {
+  close.addEventListener('click', (e) => {
+    if (e.target === close) {
+      close.addEventListener('click', (e) => {
+        if (e.target === close) {
+          modal.style.display = 'none';
+        }
+      });
     }
-  }
-});
+  });
+}
+
+// container.addEventListener("keydown", (e) => {
+//   if (modal.style.display === "block") {
+//     if (e.key === "ArrowRight") {
+//       nextImage();
+//     } else if (e.key === "ArrowLeft") {
+//       prevImage();
+//     }
+//   }
+// });
+
+if(container){
+  container.addEventListener("keydown", (e) => {
+    if (modal.style.display === "block") {
+      if (e.key === "ArrowRight") {
+        nextImage();
+      } else if (e.key === "ArrowLeft") {
+        prevImage();
+      }
+    }
+  });
+}
