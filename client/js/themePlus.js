@@ -56,7 +56,7 @@ async function handleSubmit() {
     }
   })
   .catch(()=>{
-    alert('등록에 실패했습니다!')
+    alert('이미지 파일 크기가 너무 큽니다. 다른 걸로 변경해주세요.')
   })
 
 }
