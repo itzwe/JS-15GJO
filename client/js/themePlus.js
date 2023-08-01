@@ -1,4 +1,4 @@
-import { getNode, tiger, checkTitleLength, checkListLength, removeTitleDesc, removeListDesc } from "../lib/index.js";
+import { getNode, tiger, checkTitleLength, checkListLength, removeTitleDesc, removeListDesc, loadStorage } from "../lib/index.js";
 
 
 const title = getNode('#title');
@@ -49,7 +49,9 @@ async function handleSubmit() {
       ]
   };
 
-  tiger.patch('http://localhost:3000/user/1690888344809', themeList)
+  const uniqueId = await loadStorage('uniqueId')
+
+  tiger.patch(`http://localhost:3000/user/${uniqueId}`, themeList)
   .then((res)=> {
     if (res.status === 200) {
       window.location.href = './themeList.html';
