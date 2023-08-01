@@ -1,4 +1,4 @@
-import { addClass, getNode, handleKeyword, keywordSwiper, removeClass, renderKeywords, tiger } from '../lib/index.js';
+import { addClass, getNode, handleKeyword, keywordSwiper, removeClass, renderKeywords, tiger, loadStorage } from '../lib/index.js';
 
 const {
   URL,
@@ -52,7 +52,10 @@ async function handleButton(e) {
     const vitiedData = data.visited[0];
     vitiedData.review = value;
 
-    const response = await tiger.patch(`${URL}/1690888344809`, data);
+    const uniqueId = await loadStorage('uniqueId')
+    console.log(uniqueId);
+
+    const response = await tiger.patch(`${URL}/${uniqueId}`, data);
     if (response.ok) {
       window.location.href = './visitRecord.html';
     }
