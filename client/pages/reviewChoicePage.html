@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lion Place</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <script src="../js/reviewChoicePage.js" type="module"></script>
+    <script src="../js/reviewChoicePage.js" type="module" defer></script>
   </head>
   <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
-    <div class="flex flex-col h-screen pb-[70px]">
+    <div class="flex h-screen flex-col pb-[70px]">
       <header class="flex w-full items-center justify-between bg-white px-2 py-2">
         <button onclick="window.history.back()" type="button">
-          <img src="../assets/icon/icon-left-black.svg" alt="뒤로가기" class="h-8 w-8" />
+          <img src="../assets/icon/reviewChoicePage-icon-back.svg" alt="뒤로가기" class="h-8 w-8" />
         </button>
         <h1 class="text-base font-semibold">리뷰 선택</h1>
         <button type="button">
@@ -19,7 +19,7 @@
         </button>
       </header>
 
-      <div class="bg-lightGray700 grow pb-[70px]">
+      <div class="grow bg-lightGray700 pb-[70px]">
         <div class="flex justify-between px-3 py-3">
           <div class="flex items-center gap-2">
             <button type="button" class="inline-flex items-center gap-1">
@@ -37,74 +37,10 @@
           </button>
         </div>
 
-        <ul class="choice-list px-[15px] py-2">
-          <!-- <li class="choice-list relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-            <img src="../assets/images/food/theme-noodle.svg" alt="라멘 이미지" class="rounded-l-2xl" />
-            <button type="button">
-              <img src="../assets/icon/icon-call.svg" alt="전화" class="absolute right-3 top-3" />
-            </button>
-            <div class="px-3 leading-5">
-              <p class="font-semibold">후타츠 홍대본점</p>
-              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">홍대에 있는 소바중에 제일 맛있어요!!!</p>
-              <p class="text-[10px] font-normal text-gray-400">서울시 서교동 | 4.1토 방문</p>
-            </div>
-          </li>
-
-          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-            <img src="../assets/images/food/cheesePizza.svg" alt="치즈가 늘어나는 피자" />
-            <button type="button">
-              <img src="../assets/icon/icon-call.svg" alt="전화" class="absolute right-3 top-3" />
-            </button>
-            <div class="px-3 leading-5">
-              <p class="font-semibold">마노아</p>
-              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">
-                피자가 도우도 얇은데 치즈가 그냥 가득하니 아주 존맛탱이었습니다.
-              </p>
-              <p class="text-[10px] font-normal text-gray-400">제주시 구좌읍 | 22.12.24.토 방문</p>
-            </div>
-          </li>
-
-          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-            <img src="../assets/images/food/person.svg" alt="사람" />
-            <button type="button">
-              <img src="../assets/icon/icon-call.svg" alt="전화" class="absolute right-3 top-3" />
-            </button>
-            <div class="px-3 leading-5">
-              <p class="font-semibold">온야드</p>
-              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">
-                뭘해도 사진에 머리가 안담겨요ㅜㅠㅜ지짜 너무 만족했어용
-              </p>
-              <p class="text-[10px] font-normal text-gray-400">서울시 성수동1가 | 22.11.15.토 방문</p>
-            </div>
-          </li>
-
-          <li class="relative mb-3 flex items-center rounded-2xl bg-white text-xs">
-            <img src="../assets/images/food/coffee.svg" alt="아이스 아메리카노" />
-            <button type="button">
-              <img src="../assets/icon/icon-call.svg" alt="전화" class="absolute right-3 top-3" />
-            </button>
-            <div class="px-3 leading-5">
-              <p class="font-semibold">허니바람</p>
-              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">커피 존맛탱</p>
-              <p class="text-[10px] font-normal text-gray-400">경기도 화성 진안동 | 22.11.11.금 방문</p>
-            </div>
-          </li>
-
-          <li class="relative flex items-center rounded-2xl bg-white text-xs">
-            <img src="../assets/images/food/pizza.svg" alt="피자" />
-            <button type="button">
-              <img src="../assets/icon/icon-call.svg" alt="전화" class="absolute right-3 top-3" />
-            </button>
-            <div class="px-3 leading-5">
-              <p class="font-semibold">뉴오더클럽</p>
-              <p class="w-[174px] overflow-hidden text-ellipsis whitespace-nowrap font-normal">반반 피자 맛있어!</p>
-              <p class="text-[10px] font-normal text-gray-400">서울시 연남동 | 22.7.25.화 방문</p>
-            </div>
-          </li> -->
-        </ul>
+        <ul class="choice-list px-[15px] py-2"></ul>
       </div>
 
-      <nav class="fixed bottom-0 w-full max-w-xs h-[70px] bg-white p-2 text-xs z-50">
+      <nav class="fixed bottom-0 z-50 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
         <ul class="flex items-center justify-around">
           <li>
             <a class="flex flex-col items-center justify-center" href=""
