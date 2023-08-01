@@ -1,14 +1,21 @@
-import { addClass, getNode, getNodes, insertLast, keywordSwiper, removeClass, saveStorage, tiger } from '../lib/index.js';
+import { addClass, getNode, handleKeyword, keywordSwiper, removeClass, renderKeywords, tiger } from '../lib/index.js';
 
-const { swiperWrapper, keywordButtons, reviewTextField, count, reviewSubmitButton, reviewAlert, reviewAlertClose, URL } = {
-  swiperWrapper: getNode('.swiper-wrapper'),
-  keywordButtons: getNodes('.swiper-slide button'),
-  reviewTextField: getNode('#reviewTextField'),
-  count: getNode('.reviewTextFieldCount'),
-  reviewSubmitButton: getNode('.reviewSubmitButton'),
+const { 
+  URL,
+  count, 
+  reviewAlert, 
+  swiperWrapper, 
+  reviewTextField, 
+  reviewAlertClose,
+  reviewSubmitButton
+  } = {
   URL: 'http://localhost:3000/user',
+  count: getNode('.reviewTextFieldCount'),
   reviewAlert: getNode('.review-alert'),
+  swiperWrapper: getNode('.swiper-wrapper'),
+  reviewTextField: getNode('#reviewTextField'),
   reviewAlertClose: getNode('.review-alertClose'),
+  reviewSubmitButton: getNode('.reviewSubmitButton'),
 };
 
 async function reviewData() {
@@ -16,8 +23,9 @@ async function reviewData() {
     const response = await tiger.get(URL);
     if (response.ok) {
       const data = response.data[0];
-      insertLast(swiperWrapper, createKeyword(data));
       return data;
+    } else {
+      throw new Error('API 요청 실패했습니다');
     }
   } catch (err) {
     console.error('에러', err);
@@ -33,6 +41,12 @@ function handleTextField() {
 async function handleButton(e) {
   e.preventDefault();
   const value = reviewTextField.value;
+
+  if (!value) {
+    removeClass(reviewAlert, 'hidden');
+    return;
+  }
+
   try {
     const data = await reviewData();
     const vitiedData = data.visited[0];
@@ -41,72 +55,20 @@ async function handleButton(e) {
     const response = await tiger.patch(`${URL}/1`, data);
     if (response.ok) {
       window.location.href = './visitRecord.html';
-      console.log(data);
     }
   } catch (err) {
     console.error(err);
   }
 }
 
-function createKeyword(data) {
-  const keywords = data.keywords;
-  const keywordArray = Object.values(keywords);
-
-  let template = '';
-  for (let i = 0; i < keywordArray.length; i += 4) {
-    const group = keywordArray.slice(i, i + 4);
-    template += `
-      <div class="swiper-slide flex w-56 flex-col items-center text-center text-xs font-semibold leading-[18px] text-white">
-        ${group.map((keyword) => `<button class="mb-2 h-[39px] w-48 rounded bg-lightGreen500">${keyword}</button>`).join('')}
-      </div>
-    `;
-  }
-
-  return template;
-}
-
-const maxKeyword = 5;
-const selectedKeywords = [];
-
-function handleKeyword(event) {
-  const target = event.target.closest('.swiper-slide button');
-  if (!target) return;
-
-  const isClass = target.classList.contains('bg-lionPrimary');
-
-  if (isClass) {
-    removeClass(target, 'bg-lionPrimary');
-    const selectedKeyword = target.textContent.trim();
-    const index = selectedKeywords.indexOf(selectedKeyword);
-    if (index !== -1) {
-      selectedKeywords.splice(index, 1);
-    }
-  } else {
-    if (selectedKeywords.length < maxKeyword) {
-      const selectedKeyword = target.textContent.trim();
-      selectedKeywords.push(selectedKeyword);
-      addClass(target, 'bg-lionPrimary');
-
-      keywordButtons.forEach((item) => {
-        if (item !== target) {
-          removeClass(item, 'bg-lionPrimary');
-        }
-      });
-    }
-  }
-
-  saveStorage('keywords', selectedKeywords);
-}
-
-function render() {
-  reviewData();
+(async function render() {
+  const data = await reviewData();
   keywordSwiper();
+  renderKeywords(swiperWrapper, data);
   swiperWrapper.addEventListener('click', handleKeyword);
   reviewTextField.addEventListener('input', handleTextField);
   reviewSubmitButton.addEventListener('click', handleButton);
   reviewAlertClose.addEventListener('click', () => {
     addClass(reviewAlert, 'hidden');
   });
-}
-
-render();
+})();
