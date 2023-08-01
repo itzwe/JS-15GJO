@@ -1,5 +1,5 @@
 
-import { addClass, getNode, removeClass,shake, saveStorage, loadStorage, deleteStorage } from "../lib/index.js";
+import { addClass, getNode, removeClass, saveStorage, loadStorage, deleteStorage, shakeForm } from "../lib/index.js";
 import { UserList} from "./common/common.js";
 
 
@@ -31,12 +31,12 @@ async function handleLoginCheck(e) {
     }
     else if(userId.value === '' || userPw.value === ''){
       removeClass(reEnter,'hidden');
-      shake.restart();
+      shakeForm().restart();
       idPass = false;
       pwPass = false;
     }else{
       removeClass(reEnter,'hidden');
-      shake.restart();
+      shakeForm().restart();
       idPass = false;
       pwPass = false;
     }
