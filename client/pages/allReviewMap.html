@@ -28,9 +28,7 @@
       <div class="w-auto">
         <section class="box relative">
           <!-- 맵으로 랜더링 하기-->
-          <div class="absolute left-2 top-5 z-20">
-            
-          </div>
+          <div class="absolute left-2 top-5 z-20"></div>
         </section>
       </div>
       <section>
@@ -267,16 +265,15 @@
         </div>
 
         <!-- 모달 출력 js 버전 -->
-        <div class="modal fixed top-0 left-0 z-50 w-full h-full hidden ">
-          <button class="close text-gray-400 text-5xl font-thin fixed  top-[30px] right-[50px]">X</button>
-          <div class="relative inline-block w-[400px] h-[400px] top-2/4 left-2/4 img-box">
-            <img class="absolute w-full modal-i" src="#" alt="모달메뉴" />
+        <div class="modal fixed left-0 top-0 z-50 hidden h-full w-full">
+          <button class="close fixed right-[50px] top-[30px] text-5xl font-thin text-gray-400">X</button>
+          <div class="img-box relative left-2/4 top-2/4 inline-block h-[400px] w-[400px]">
+            <img class="modal-i absolute w-full" src="#" alt="모달메뉴" />
             <button class="prev">&lt;</button>
             <button class="next">&gt;</button>
           </div>
         </div>
 
-      
         <!-- 방문자 리뷰 -->
         <div class="mt-4 bg-white">
           <h2 class="border-b-[1px] border-gray-300 px-3 py-2.5 font-semibold">방문자 리뷰</h2>
@@ -352,14 +349,12 @@
         <div class="mt-4 bg-white">
           <!-- footer 위 지도 부분-->
           <h2 class="pl-3 pt-3 font-semibold">지도</h2>
-          <div class="relative p-3 map-modal">
+          <div class="map-modal relative p-3">
             <section class="box2 rounded-3xl"><!-- 푸터 위 맵 랜더링--></section>
             <button class="plusButton absolute right-6 top-7 z-40">
               <img src="../assets/icon/icon-rtlbArrow.svg" alt="확대" />
             </button>
           </div>
-
-
 
           <div class="flex pl-3 pt-2 text-xs">
             <img src="../assets/icon/icon-grayMap.svg" alt="위치" />
