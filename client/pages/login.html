@@ -12,16 +12,16 @@
     <title>Lion Place</title>
   </head>
 
-  <body class="mx-auto h-full max-w-[480px] font-pretendard">
-    <div class="relative mx-auto h-screen w-[320px] bg-lionPrimary">
-      <button class="backBtn absolute left-2 top-2" onclick="window.history.back()">
+  <body class="mx-auto h-screen max-w-xs font-pretendard">
+    <div class="w-xs relative mx-auto h-screen bg-lionPrimary text-white">
+      <button class="absolute left-2 top-2" onclick="window.history.back()">
         <img src="../assets/icon/icon-back.svg" alt="뒤로가기" />
       </button>
-      <h1 class="pt-16 text-center text-xl font-bold text-lightGray">
+      <h1 class="text-lightGray pt-16 text-center text-xl font-bold">
         <img src="../assets/icon/icon-Mappin.svg" alt="라이언 플레이스" class="mx-auto mb-2 block h-8 w-6" />
         Lion Place
       </h1>
-      <form action="/" method="post" class="mx-auto mt-24 w-[250px] text-lightGray">
+      <form action="/" method="post" class="text-lightGray mx-auto mt-24 w-[250px]">
         <fieldset>
           <legend class="mb-6 text-2xl font-semibold">로그인</legend>
 
@@ -33,7 +33,7 @@
                 type="text"
                 placeholder="아이디를 입력해주세요"
                 required
-                class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+                class="border-lightGray container mb-3 rounded border bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
               />
             </div>
 
@@ -44,7 +44,7 @@
                 type="password"
                 placeholder="비밀번호를 입력해주세요"
                 required
-                class="container mb-3 rounded border border-lightGray bg-transparent px-5 py-3 text-xs placeholder-lightGray focus:outline-none"
+                class="border-lightGray container mb-3 rounded border bg-transparent px-5 py-3 text-xs placeholder:text-white focus:outline-none"
               />
             </div>
 
@@ -62,15 +62,16 @@
 
             <button
               type="submit"
-              class="loginBtn container mb-3 mt-10 h-14 rounded border border-lightGray bg-transparent hover:border-lionSecondary hover:bg-lionSecondary"
+              class="loginBtn border-lightGray container mb-3 mt-10 h-14 rounded border bg-white text-lionContent hover:border-lionSecondary hover:bg-lionSecondary hover:text-white"
             >
               로그인
             </button>
-            <a
-              href="./join.html"
-              class="container mb-3 block h-14 rounded border border-lightGray bg-transparent text-center leading-[56px] hover:border-lionSecondary hover:bg-lionSecondary"
-              >회원가입</a
+            <button
+              onclick="location.href = './join.html'"
+              class="container mb-3 block h-14 rounded border border-white bg-transparent text-center leading-[56px] hover:border-lionSecondary hover:bg-lionSecondary"
             >
+              회원가입
+            </button>
           </div>
         </fieldset>
       </form>
