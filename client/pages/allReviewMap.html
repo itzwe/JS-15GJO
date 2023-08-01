@@ -15,12 +15,12 @@
   <body class="mx-auto h-screen w-[320px] font-pretendard leading-relaxed">
     <div class="w-auto">
       <header class="fixed z-50 flex w-[320px] p-4" id="fixed-header">
-        <button class="mt-1 rounded-3xl border border-gray-300 bg-white px-3 py-2">
-          <img src="../assets/images/icon/icon-leftArrow.svg" alt="뒤로가기" />
+        <button class="mapBackBtn mt-1 rounded-3xl border border-gray-300 bg-white px-3 py-2">
+          <img src="../assets/icon/icon-leftArrow.svg" alt="뒤로가기" />
         </button>
         <h1 class="ml-3 mt-2 font-semibold opacity-0" id="fixed_title">마포곱창타운 연남점</h1>
         <a href="">
-          <img class="absolute right-0 top-[35%] opacity-0" src="../assets/images/icon/icon-close.svg" alt="닫기" id="second_img" />
+          <img class="absolute right-0 top-[35%] opacity-0" src="../assets/icon/icon-close.svg" alt="닫기" id="second_img" />
         </a>
       </header>
 
@@ -28,9 +28,7 @@
         <section class="box relative">
           <!-- 맵으로 랜더링 하기-->
           <div class="absolute left-2 top-5 z-20">
-            <!-- <button class="rounded-3xl border border-gray-300 bg-white px-3 py-2 shadow-lg">
-              <img src="../assets/images/icon/icon-leftArrow.svg" alt="" />
-            </button> -->
+            
           </div>
         </section>
       </div>
@@ -46,7 +44,7 @@
           <h3 class="after: text-center"><strong>마포곱창타운 연남점</strong> <span class="text-xs text-gray-400">곱창, 막창, 양</span></h3>
           <div class="ml-3 flex">
             <button>
-              <img class="toggle-icon ml-3" src="../assets/images/icon/icon-love.svg" alt="찜" />
+              <img class="toggle-icon ml-3" src="../assets/icon/icon-love.svg" alt="찜" />
             </button>
             <strong class="ml-1">4.47</strong><span class="text-gray-400">/5</span>
             <a href="" class="ml-2 text-xs leading-6">방문자 리뷰 2,229 &middot; 블로그리뷰 1,063</a>
@@ -56,29 +54,29 @@
         <div class="mt-5 flex justify-center">
           <!-- 출발 도착 부분-->
           <a href="#" class="flex items-center rounded-2xl border border-lionSecondary px-5 py-1">
-            <img src="../assets/images/icon/icon-depart.svg" alt="출발" />
+            <img src="../assets/icon/icon-depart.svg" alt="출발" />
             <span class="ml-2 text-xs font-semibold">출발</span>
           </a>
           <a href="#" class="ml-3">
-            <img src="../assets/images/icon/icon-arrive.svg" alt="도착" />
+            <img src="../assets/icon/icon-arrive.svg" alt="도착" />
           </a>
         </div>
         <nav class="p-4 text-xs">
           <ul class="flex justify-between">
             <li class="flex flex-col items-center">
-              <img src="../assets/images/icon/icon-call.svg" alt="전화" />
+              <img src="../assets/icon/icon-mapcall.svg" alt="전화" />
               <a href="">전화</a>
             </li>
             <li class="flex flex-col items-center">
-              <img src="../assets/images/icon/icon-save.svg" alt="저장" />
+              <img src="../assets/icon/icon-save.svg" alt="저장" />
               <a href="">저장</a>
             </li>
             <li class="flex flex-col items-center">
-              <img src="../assets/images/icon/icon-car.svg" alt="내비게이션" />
+              <img src="../assets/icon/icon-car.svg" alt="내비게이션" />
               <a href="">내비게이션</a>
             </li>
             <li class="flex flex-col items-center">
-              <img src="../assets/images/icon/icon-share.svg" alt="공유" />
+              <img src="../assets/icon/icon-mapshare.svg" alt="공유" />
               <a href="">공유</a>
             </li>
           </ul>
@@ -108,7 +106,7 @@
             <li>
               <div class="">
                 <a href="" class="flex">
-                  <img class="" src="../assets/images/icon/icon-ring.svg" alt="" />
+                  <img class="" src="../assets/icon/icon-ring.svg" alt="" />
                   <strong class="mr-3">알림받기</strong>
                 </a>
               </div>
@@ -129,13 +127,13 @@
           <ul class="border-b-[1px] border-gray-300 py-3 pl-3">
             <!-- 위치 및 출구-->
             <li class="flex text-xs">
-              <img src="../assets/images/icon/icon-grayMap.svg" alt="위치" />
+              <img src="../assets/icon/icon-grayMap.svg" alt="위치" />
               <p class="ml-1 text-gray-400">서울 마포구 동교로 27길 20</p>
               <button class="ml-2">
-                <img src="../assets/images/icon/icon-bottomArrow.svg" alt="펼치기" />
+                <img src="../assets/icon/icon-bottomArrow.svg" alt="펼치기" />
               </button>
               <button class="ml-2 mt-[0.5px] flex">
-                <img src="../assets/images/icon/icon-gps.svg" alt="gps" />
+                <img src="../assets/icon/icon-gps.svg" alt="gps" />
                 <span class="text-blue-400">거리뷰</span>
               </button>
             </li>
@@ -148,21 +146,21 @@
           </ul>
           <div class="flex border-b-[1px] border-gray-300 py-2 pl-3">
             <!-- 영업 중-->
-            <img src="../assets/images/icon/icon-clock.svg" alt="시간" />
+            <img src="../assets/icon/icon-mapclock.svg" alt="시간" />
             <strong class="ml-1">영업 중</strong>
             <p class="ml-1 text-gray-500">• 01:00에 영업 종료</p>
             <button class="ml-1">
-              <img src="../assets/images/icon/icon-bottomArrow.svg" alt="펼치기" />
+              <img src="../assets/icon/icon-bottomArrow.svg" alt="펼치기" />
             </button>
           </div>
           <div class="flex border-b-[1px] border-gray-300 py-2 pl-3">
-            <img src="../assets/images/icon/icon-grayCall.svg" alt="전화번호" />
+            <img src="../assets/icon/icon-grayCall.svg" alt="전화번호" />
             <span class="ml-2 font-medium">02-336-4496</span>
-            <img class="ml-2" src="../assets/images/icon/icon-blueCopy.svg" alt="복사" />
+            <img class="ml-2" src="../assets/icon/icon-blueCopy.svg" alt="복사" />
             <button class="text-blue-400">복사</button>
           </div>
           <div class="flex py-2 pl-3">
-            <img src="../assets/images/icon/icon-grayStore.svg" alt="가게" />
+            <img src="../assets/icon/icon-grayStore.svg" alt="가게" />
             <span class="ml-1 text-gray-400">단체석, 포장, 예약, 남/녀 화장실 구분</span>
           </div>
         </div>
@@ -267,15 +265,17 @@
           </div>
         </div>
 
-        <!-- 모달 출력 -->
-        <div class="modal">
-          <button class="close">X</button>
-          <div class="hi">
-            <img class="modal-i" src="#" alt="모달메뉴" />
+        <!-- 모달 출력 js 버전 -->
+        <div class="modal fixed top-0 left-0 z-50 w-full h-full hidden ">
+          <button class="close text-gray-400 text-5xl font-thin fixed  top-[30px] right-[50px]">X</button>
+          <div class="relative inline-block w-[400px] h-[400px] top-2/4 left-2/4 img-box">
+            <img class="absolute w-full modal-i" src="#" alt="모달메뉴" />
             <button class="prev">&lt;</button>
             <button class="next">&gt;</button>
           </div>
         </div>
+
+      
         <!-- 방문자 리뷰 -->
         <div class="mt-4 bg-white">
           <h2 class="border-b-[1px] border-gray-300 px-3 py-2.5 font-semibold">방문자 리뷰</h2>
@@ -296,7 +296,7 @@
                 </a>
               </div>
               <div class="flex px-5 pb-3">
-                <a href="#" class=""><img class="pt-1" src="../assets/images/icon/icon-profile.svg" alt="프로필" /></a>
+                <a href="#" class=""><img class="pt-1" src="../assets/icon/icon-profile.svg" alt="프로필" /></a>
                 <a href="#" class="flex flex-col pl-2">
                   <span class="text-xs font-semibold">COOLION</span>
                   <span class="text-[10px] text-gray-400">3.10금 &middot; 2번쨰 방문 &middot; 영수증 </span>
@@ -317,7 +317,7 @@
                 </a>
               </div>
               <div class="flex px-5 pb-3">
-                <a href="#" class=""><img class="pt-1" src="../assets/images/icon/icon-profile.svg" alt="프로필" /></a>
+                <a href="#" class=""><img class="pt-1" src="../assets/icon/icon-profile.svg" alt="프로필" /></a>
                 <a href="#" class="flex flex-col pl-2">
                   <span class="text-xs font-semibold">COOLION</span>
                   <span class="text-[10px] text-gray-400">3.10금 &middot; 2번쨰 방문 &middot; 영수증 </span>
@@ -339,7 +339,7 @@
                 </a>
               </div>
               <div class="flex px-5 pb-3">
-                <a href="#" class=""><img class="pt-1" src="../assets/images/icon/icon-profile.svg" alt="프로필" /></a>
+                <a href="#" class=""><img class="pt-1" src="../assets/icon/icon-profile.svg" alt="프로필" /></a>
                 <a href="#" class="flex flex-col pl-2">
                   <span class="text-xs font-semibold">COOLION</span>
                   <span class="text-[10px] text-gray-400">3.10금 &middot; 2번쨰 방문 &middot; 영수증 </span>
@@ -351,20 +351,23 @@
         <div class="mt-4 bg-white">
           <!-- footer 위 지도 부분-->
           <h2 class="pl-3 pt-3 font-semibold">지도</h2>
-          <div class="relative p-3">
+          <div class="relative p-3 map-modal">
             <section class="box2 rounded-3xl"><!-- 푸터 위 맵 랜더링--></section>
             <button class="plusButton absolute right-6 top-7 z-40">
-              <img src="../assets/images/icon/icon-rtlbArrow.svg" alt="확대" />
+              <img src="../assets/icon/icon-rtlbArrow.svg" alt="확대" />
             </button>
           </div>
+
+
+
           <div class="flex pl-3 pt-2 text-xs">
-            <img src="../assets/images/icon/icon-grayMap.svg" alt="위치" />
+            <img src="../assets/icon/icon-grayMap.svg" alt="위치" />
             <p class="ml-1 text-gray-400">서울 마포구 동교로 27길 20</p>
             <button class="ml-2">
-              <img src="../assets/images/icon/icon-bottomArrow.svg" alt="펼치기" />
+              <img src="../assets/icon/icon-bottomArrow.svg" alt="펼치기" />
             </button>
             <button class="ml-2 mt-[0.5px] flex">
-              <img src="../assets/images/icon/icon-gps.svg" alt="gps" />
+              <img src="../assets/icon/icon-gps.svg" alt="gps" />
               <span class="text-blue-400">거리뷰</span>
             </button>
           </div>
@@ -376,15 +379,15 @@
           </div>
           <div class="flex justify-between py-4">
             <button class="flex w-1/3 justify-center border py-2">
-              <img class="mt-0.5" src="../assets/images/icon/icon-Subway.svg" alt="대중교통" />
+              <img class="mt-0.5" src="../assets/icon/icon-Subway.svg" alt="대중교통" />
               <span class="text-gray-500">대중교통</span>
             </button>
             <button class="flex w-1/3 justify-center border py-2">
-              <img class="mt-0.5" src="../assets/images/icon/icon-blueCar.svg" alt="자동차" />
+              <img class="mt-0.5" src="../assets/icon/icon-blueCar.svg" alt="자동차" />
               <span class="text-gray-500">자동차</span>
             </button>
             <button class="flex w-1/3 justify-center border py-2">
-              <img class="mt-0.5" src="../assets/images/icon/icon-blueMy.svg" alt="도보" />
+              <img class="mt-0.5" src="../assets/icon/icon-blueMy.svg" alt="도보" />
               <span class="text-gray-500">도보</span>
             </button>
           </div>
@@ -398,7 +401,7 @@
           <a class="aBefore" href="#">신고센터</a>
         </div>
       </footer>
-      <nav class="relative h-[70px] -translate-y-full bg-white p-2 text-xs">
+      <nav class="fixed bottom-0 z-40 w-[320px] bg-white p-2 text-xs">
         <ul class="flex items-center justify-around">
           <li>
             <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
