@@ -1,8 +1,8 @@
 {
   "user": [
     {
-      "id": 1,
-      "userId": "sunyong@naver.com",
+      "id": 1690888344809,
+      "userId": "sunyong",
       "userPwd": "sunyong1234@",
       "userEmail": "sunyong@naver.com",
       "theme": [
@@ -22,16 +22,12 @@
           "location": "마포구 연남동",
           "menu": "한우곱창구이",
           "price": "25,000",
-          "review": "주말엔 매일 줄 서있어서 먹을 수가 없었는데 평일에 다행히 갈 수 있어서 너무 좋았어요!!!",
+          "review": "",
           "image": {
             "src": "food/theme-giblets.svg",
             "alt": "곱창"
           },
           "keywords": [
-            "💚 음식이 맛있어요",
-            "💇‍♀️ 재료가 신선해요",
-            "🌹 양이 많아요",
-            "😎 맛있어요",
             "📦 국내산을 사용해요",
             "🔍 사장님이 친절해요",
             "🤲 손이 빨라요",
@@ -97,7 +93,7 @@
         },
         {
           "id": 4,
-          "name": "허니바람",
+          "name": "하니바람",
           "description": "화성에 있는 커피중 제일 맛있습니다!",
           "date": "22.11.11.금",
           "location": "화성시 진안동",
