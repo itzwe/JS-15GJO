@@ -10,6 +10,10 @@ export function keywordSwiper() {
     },
     pagination: {
       el: '.swiper-paginate',
+      type: 'bullets',
+      renderBullet: function (index, className) {
+        return `<span class="${className} bg-lionPrimary"></span>`;
+      },
     },
     navigation: {
       nextEl: '.swiper-next',
