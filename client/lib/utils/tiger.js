@@ -71,6 +71,7 @@ tiger.delete = (url,options) =>{
     ...options
   })
 }
+
 tiger.patch = (url,body,options) =>{
   return tiger({
     method:'PATCH',

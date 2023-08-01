@@ -49,7 +49,7 @@ async function handleSubmit() {
       ]
   };
 
-  tiger.patch('http://localhost:3000/user/1', themeList)
+  tiger.patch('http://localhost:3000/user/1690888344809', themeList)
   .then((res)=> {
     if (res.status === 200) {
       window.location.href = './themeList.html';
