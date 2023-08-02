@@ -50,7 +50,7 @@
 3. 피드 페이지 (로그인 성공 시 넘어가는 페이지)
 <img src = "./client/assets/images/github/feed.png" width="200px">
 3-1 맵 페이지 (게시글 클릭 시)
-<img src = "./client/assets/images/github/map1.png" width="200px"><img src = "./client/assets/images/github/map2.png" width="200px">
+<img src = "./client/assets/images/github/map1.png" width="200px" style="display:inline;"><img src = "./client/assets/images/github/map2.png" width="200px" style="display:inline;">
 
 4. 방문기록 페이지 ( nav바 방문버튼 누를 시 이동)
 <img src = "./client/assets/images/github/visitrecord.png" width="200px">
@@ -63,7 +63,7 @@
 1. 테마 설정 페이지 (테마 페이지 +버튼 누를 시)
 <img src="./client/assets/images/github/themeplus.png" width="200px">
 6-1 테마 리스트 페이지 (테마 설정 페이지에서 등록버튼 누를 시)
-<img src ="./client/assets/images/github/themelist1.png" width="195px"><img src ="./client/assets/images/github/themelist2.png" width="200px">
+<img src ="./client/assets/images/github/themelist1.png" width="195px" style="display:inline;"><img src ="./client/assets/images/github/themelist2.png" width="200px" style="display:inline;">
      　　　　
 
 
