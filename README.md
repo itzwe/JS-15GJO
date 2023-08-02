@@ -2,8 +2,7 @@
 
 - [Lion Place (mobile)](#lion-place-mobile)
   - [프로젝트 소개](#프로젝트-소개)
-  - [참여 인원](#참여-인원)
-    - [담당 페이지](#담당-페이지)
+  - [참여 인원 및 담당 페이지](#참여-인원-및-담당-페이지)
   - [기술 스택](#기술-스택)
     - [](#)
     - [화면 플로우](#화면-플로우)
@@ -16,24 +15,17 @@
   네이버 플레이스 기반으로 한 바닐라 JS 앱 만들기.  
 
 
-## 참여 인원
+## 참여 인원 및 담당 페이지
 *[테킷 멋쟁이 사자처럼]* 프론트엔드 스쿨 6기  
-강경민, 강예나, 박지영, 박지함, 전선용
 
-| 이름 | GitHub |
-|:----:|:------:|
-| 박지영 | https://github.com/yxxung  |
-| 전선용 | https://github.com/sy0725  |
-| 박지함 | https://github.com/itzwe  |
-| 강예나 | https://github.com/yenaf  |
-| 강경민 | https://github.com/minomad  |
 
-### 담당 페이지
-**강경민** :  방문 페이지, 리뷰 페이지
-**강예나** :  로그인 페이지, 회원가입 페이지
-**박지영** :  테마 생성 및 리스트 출력 페이지
-**박지함** : 피드 페이지, 가게 상세정보
-**전선용** : 테마 페이지, 리뷰 선택 페이지
+| 이름 | GitHub | 담당페이지 |
+|:----:|:------:|:------:|
+| 박지영 | https://github.com/yxxung  | 방문 페이지, 리뷰 페이지 |
+| 전선용 | https://github.com/sy0725  |  로그인 페이지, 회원가입 페이지 |
+| 박지함 | https://github.com/itzwe  |  테마 생성 및 리스트 출력 페이지 |
+| 강예나 | https://github.com/yenaf  |  피드 페이지, 가게 상세정보 |
+| 강경민 | https://github.com/minomad  |  테마 페이지, 리뷰 선택 페이지 |
 
 ## 기술 스택
 
@@ -51,27 +43,27 @@
 
 
  2. 로그인 페이지
-   <img src = "./client/assets/images/github/login.png" width="200px">
-   　　　　2-1 회원가입 페이지 (기존 가입된 아이디 말고 새로운 아이디 사용하고 싶은 경우)
-   　　　　<img src = "./client/assets/images/github/sign.png" width = "200px">
+  <img src = "./client/assets/images/github/login.png" width="200px">
+2-1 회원가입 페이지 (기존 가입된 아이디 말고 새로운 아이디 사용하고 싶은 경우)
+ <img src = "./client/assets/images/github/signin.png" width = "200px">
 
 3. 피드 페이지 (로그인 성공 시 넘어가는 페이지)
 <img src = "./client/assets/images/github/feed.png" width="200px">
-　　　　3-1 맵 페이지 (게시글 클릭 시)
-　　　　<img src = "./client/assets/images/github/map1.png" width="200px"><img src = "./client/assets/images/github/map2.png" width="250px">
+3-1 맵 페이지 (게시글 클릭 시)
+<img src = "./client/assets/images/github/map1.png" width="200px"><img src = "./client/assets/images/github/map2.png" width="200px">
 
 4. 방문기록 페이지 ( nav바 방문버튼 누를 시 이동)
-   <img src = "./client/assets/images/github/visitrecord.png" width="200px">
-   　　　　4-1 리뷰쓰기 페이지 (방문기록 페이지에서 리뷰쓰기 누를 시)
-   　　　　<img src ="./client/assets/images/github/visitlike.png" width="200px">
+<img src = "./client/assets/images/github/visitrecord.png" width="200px">
+4-1 리뷰쓰기 페이지 (방문기록 페이지에서 리뷰쓰기 누를 시)
+<img src ="./client/assets/images/github/visitlike.png" width="200px">
 5. 테마 페이지 (nav바 리뷰버튼 누를 시 이동)
-  <img src ="./client/assets/images/github/themepage.png" width="200px">
-   　　　　5-1 전체 리뷰 페이지(테마 페이지에서 전체버튼 누를 시 이동)
-      　　　　<img src="./client/assets/images/github/totalreview.png" width="200px">
-6. 테마 설정 페이지 (테마 페이지 +버튼 누를 시)
+<img src ="./client/assets/images/github/themepage.png" width="200px">
+5-1 전체 리뷰 페이지(테마 페이지에서 전체버튼 누를 시 이동)
+<img src="./client/assets/images/github/totalreview.png" width="200px">
+1. 테마 설정 페이지 (테마 페이지 +버튼 누를 시)
 <img src="./client/assets/images/github/themeplus.png" width="200px">
-          　　　　6-1 테마 리스트 페이지 (테마 설정 페이지에서 등록버튼 누를 시)
-     　　　　<img src ="./client/assets/images/github/themelist1.png" width="195px"><img src ="./client/assets/images/github/themelist2.png" width="200px">
+6-1 테마 리스트 페이지 (테마 설정 페이지에서 등록버튼 누를 시)
+<img src ="./client/assets/images/github/themelist1.png" width="195px"><img src ="./client/assets/images/github/themelist2.png" width="200px">
      　　　　
 
 
