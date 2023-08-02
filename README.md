@@ -62,7 +62,12 @@
 1. 테마 설정 페이지 (테마 페이지 +버튼 누를 시)
 <img src="./client/assets/images/github/themeplus.png" width="200px">
 6-1 테마 리스트 페이지 (테마 설정 페이지에서 등록버튼 누를 시)
-<img src ="./client/assets/images/github/themelist1.png" width="195px" style="display:inline;"><img src ="./client/assets/images/github/themelist2.png" width="200px" style="display:inline;">
+<table>
+<tr>
+<td><img src ="./client/assets/images/github/themelist1.png" width="195px"></td>
+<td><img src ="./client/assets/images/github/themelist2.png" width="200px"></td>
+</tr>
+</table>
      　　　　
 
 
