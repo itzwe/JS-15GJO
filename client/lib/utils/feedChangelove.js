@@ -1,4 +1,8 @@
 import {getNodes} from '../dom/getNode.js'
+import { handleLogout } from "./logout.js";
+
+const btnLogout = document.querySelector('.btnLogout');
+btnLogout.addEventListener('click', handleLogout);
 
 export function imageChange(node){
 

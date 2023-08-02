@@ -7,6 +7,7 @@ const reUserPw = getNode('#reUserPass');
 const userEmail = getNode('#userEmail');
 const joinBtn = getNode('.joinBtn');
 const reEnter = getNode('.reEnter')
+const backBtn= getNode('.backBtn');
 
 //상태변수
 let idPass = false;
@@ -107,6 +108,10 @@ async function joinButton(e) {
   }
 
 }
+const check = getNode('.check');
+const cancel = getNode('.cancel');
+
+
 
 
 userId.addEventListener('input',handleCheckId);
@@ -114,3 +119,12 @@ userPw.addEventListener('input',handleCheckPw);
 reUserPw.addEventListener('input',handleCheckRePw);
 userEmail.addEventListener('input',handleCheckEmail);
 joinBtn.addEventListener('click',joinButton);
+backBtn.addEventListener('click',()=>{
+  removeClass('.backMs','hidden');
+});
+check.addEventListener('click',()=>{
+  history.back()
+});
+cancel.addEventListener('click',()=>{
+  addClass('.backMs','hidden');
+});

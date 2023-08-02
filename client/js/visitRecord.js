@@ -1,5 +1,8 @@
 import { getNode, renderReview, tiger } from '../lib/index.js';
+import { handleLogout } from "../lib/utils/logout.js";
 
+const btnLogout = document.querySelector('.btnLogout');
+btnLogout.addEventListener('click', handleLogout);
 
 (async function reviewData() {
   try {

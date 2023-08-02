@@ -1,4 +1,8 @@
 import { getNode, insertFirst, tiger } from '../lib/index.js';
+import { handleLogout } from "../lib/utils/logout.js";
+
+const btnLogout = document.querySelector('.btnLogout');
+btnLogout.addEventListener('click', handleLogout);
 
 const themeReviewPage = getNode('.square-list');
 async function fetchData() {
