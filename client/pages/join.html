@@ -13,9 +13,20 @@
 
   <body class="mx-auto h-screen max-w-xs font-pretendard">
     <div class="relative mx-auto h-screen max-w-xs bg-lionPrimary text-white">
-      <button class="absolute left-2 top-2" onclick="window.history.back()">
+      <button class="backBtn absolute left-2 top-2">
         <img src="../assets/icon/icon-back.svg" alt="뒤로가기" />
       </button>
+      <div class="backMs relative hidden text-center">
+        <div class="absolute top-3 rounded-r-md bg-lionSecondary p-4">
+          페이지를 이동하시겠습니까?<br />
+          변경사항이 저장되지 않습니다.
+          <div class="mt-3 flex justify-evenly">
+            <button type="button" class="check border border-white px-7">확인</button>
+            <button type="button" class="cancel border border-white px-7">취소</button>
+          </div>
+        </div>
+      </div>
+
       <h1 class="text-lightGray pt-16 text-center text-xl font-bold">
         <img src="../assets/icon/icon-Mappin.svg" alt="라이언 플레이스" class="mx-auto mb-2 block h-8 w-6" />
         Lion Place
@@ -90,10 +101,10 @@
           </div>
 
           <button
-          type="submit"
-          class="joinBtn border-lightGray container mt-12 h-14 rounded border bg-white text-lionContent hover:border-lionSecondary hover:bg-lionSecondary hover:text-white"
+            type="submit"
+            class="joinBtn border-lightGray container mt-12 h-14 rounded border bg-white text-lionContent hover:border-lionSecondary hover:bg-lionSecondary hover:text-white"
           >
-          회원가입
+            회원가입
           </button>
         </fieldset>
       </form>
