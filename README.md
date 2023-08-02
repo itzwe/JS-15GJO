@@ -63,7 +63,7 @@
 4. 방문기록 페이지 ( nav바 방문버튼 누를 시 이동)
    <img src = "./client/assets/images/github/visitrecord.png" width="200px">
    　　　　4-1 리뷰쓰기 페이지 (방문기록 페이지에서 리뷰쓰기 누를 시)
-   　　　　<img src ="./client/assets/images/github/visitlike.png" width="200px">
+   　　　　&nbsp;&nbsp;&nbsp;<img src ="./client/assets/images/github/visitlike.png" width="200px">
 5. 테마 페이지 (nav바 리뷰버튼 누를 시 이동)
   <img src ="./client/assets/images/github/themepage.png" width="200px">
    　　　　5-1 전체 리뷰 페이지(테마 페이지에서 전체버튼 누를 시 이동)
