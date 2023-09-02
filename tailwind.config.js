@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        lionPrimary: '#8cb488',// 기본색
+        lionPrimary: '#ffa726',// 기본색
         lionSecondary: '#355133', // 버튼색
         lionContent: '#4f4f4f', //글자색
         lionTertiary: '#cddfcb',
@@ -12,7 +12,7 @@ module.exports = {
         lightGreen200: '#8cb488',
         lightGreen300: '#9bbe97',
         lightGreen400: '#aac8a7',
-        lightGreen500: '#b9d2b7',
+        lightGreen500: '#ffb74d',
         lightGreen600: '#c8dcc6',
         lightGreen700: '#d7e5d6',//가장 밝은색
         lightGray500: '#6B6B6B',

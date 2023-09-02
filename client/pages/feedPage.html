@@ -7,105 +7,56 @@
     <link rel="stylesheet" href="../css/main.css" />
     <script src="../lib/utils/feedChangelove.js" type="module"></script>
   </head>
-  <body class="mx-auto h-screen max-w-xs font-pretendard leading-relaxed">
+  <body class="mx-auto h-screen w-full font-pretendard leading-relaxed">
     <div class="flex items-center justify-center pb-[70px]">
-      <div>
-        <header class="relative w-80 bg-lionPrimary px-[22px] pb-4 pt-9">
-          <h1 class="hidden">사용자 프로필</h1>
-          <button type="button" class="absolute right-7 top-4 rounded border px-1 text-xs text-white">쿠폰</button>
-          <span class="absolute right-5 top-2 rounded-full bg-white px-[5px] py-0 text-xs">1</span>
-          <div class="flex pb-3 pl-1 text-white">
-            <button class="relative mr-[19px] h-[56px] w-[56px] rounded-full border-2 border-white">
-              <img src="../assets/images/etc/단지공주.jpg" alt="" class="h-[52px] w-[56px] rounded-full" />
+      <div class="w-full">
+        <header class="relative h-[200px] w-full bg-lionPrimary px-4 pb-4 pt-2">
+          <div class="mb-4 flex justify-between border-b border-orange-300 pb-2">
+            <div>
+              <img class="inline-block w-5" src="https://cdn.discordapp.com/attachments/1145989187691102300/1147440160477286420/image.png" alt="" />
+              <span class="text-2xl font-bold text-white">Lionly</span>
+            </div>
+            <button class="w-7">
+              <span class="block h-1 w-full rounded-xl bg-white"></span>
+              <span class="mt-1 block h-1 w-full rounded-xl bg-white"></span>
+              <span class="mt-1 block h-1 w-full rounded-xl bg-white"></span>
+            </button>
+          </div>
+
+          <div class="mt-10 flex justify-center pb-3 pl-1 text-white">
+            <button class="relative mr-[19px] h-[70px] w-[70px] rounded-full border-2 border-white">
+              <img src="../assets/images/etc/단지공주.jpg" alt="" class="h-[70px] w-[70px] rounded-full" />
               <img src="../assets/icon/icon-pencilRound.svg" alt="프로필수정" class="absolute bottom-[-3px] right-[-3px]" />
             </button>
             <div>
-              <div>
-                <span class="flex items-center pb-1 text-sm font-semibold text-white">
+              <div class="">
+                <span class="flex items-center pb-1 text-2xl font-semibold text-white">
                   단지공주
-                  <button>
-                    <img class="mb-[4px] pl-1" src="../assets/icon/icon-share.svg" alt="공유하기" />
-                  </button>
-                  <button class="btnLogout ml-3 rounded-md border bg-lightGreen700 px-1 text-center text-[10px] text-lightGray500">Logout</button>
+
+                  <button class="btnLogout ml-3 rounded-md border bg-white px-1 text-center text-[10px] text-lightGray500">Logout</button>
                 </span>
+                <button class="flex w-52 items-center rounded-lg bg-lightGreen500 px-14 py-1">
+                  <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-7 pr-[5px]" />
+                  <span class="text-lg font-bold">글쓰기</span>
+                </button>
               </div>
-              <ul class="flex gap-3 text-xs font-normal">
-                <li class="flex flex-col text-center">
-                  <span>리뷰</span>
-                  <span>17</span>
-                </li>
-                <li class="flex flex-col border-x px-3 text-center">
-                  <span>사진</span>
-                  <span>19</span>
-                </li>
-                <li class="flex flex-col border-r pr-2 text-center">
-                  <span>팔로잉</span>
-                  <span>0</span>
-                </li>
-                <li class="flex flex-col text-center">
-                  <span>팔로워</span>
-                  <span>2</span>
-                </li>
-              </ul>
             </div>
           </div>
-          <div class="flex gap-2 p-1 text-center text-xs font-semibold leading-4 text-white">
-            <button class="flex w-44 items-center rounded-lg bg-lightGreen500 px-14 py-[6px]">
-              <img src="../assets/icon/icon-pencil.svg" alt="연필" class="w-5 pr-[5px]" />
-              글쓰기
-            </button>
-            <button class="flex w-20 items-center rounded-lg bg-lightGreen500 px-[14px] py-[6px]">
-              <img src="../assets/icon/icon-mission.svg" alt="미션" class="w-5 pr-[5px]" />
-              미션
-            </button>
-          </div>
         </header>
-        <nav class="bg-lionPrimary">
-          <ul class="flex justify-around text-center font-semibold text-lionTertiary">
-            <li class="relative w-[68px] border-b-2 border-lionSecondary text-lionSecondary">
-              <a href="./feedPage.html">피드</a>
-              <button class="right-10px alert-feed absolute top-[-20px] hidden text-4xl text-red-600">&middot;</button>
-            </li>
-            <li class="w-[68px]">
-              <a href="./visitRecord.html" class="">방문</a>
-            </li>
-            <li class="w-[68px]"><a href="./themePage.html">리뷰</a></li>
-            <li class="w-[68px]"><a href="" class="whitespace-nowrap">예약&middot;주문</a></li>
-          </ul>
-        </nav>
-        <main>
+
+        <main class="mx-auto w-[500px]">
           <section>
             <div class="bg-slate-50">
               <ul class="flex justify-around py-2 text-xs font-semibold leading-6">
-                <li class="rounded bg-lightGreen500 px-2 text-white"><button type="button">전체</button></li>
-                <li class="rounded bg-white px-2"><button type="button" class="hongikBtn">홍익대</button></li>
-                <li class="rounded bg-white px-2"><button type="button">합정역</button></li>
+                <li class="rounded bg-lightGreen500 px-2 text-white"><button type="button">전체 게시글</button></li>
+                <li class="rounded bg-white px-2"><button type="button" class="hongikBtn">채널명</button></li>
+                <li class="rounded bg-white px-2"><button type="button">채널명</button></li>
                 <li class="rounded bg-white px-2">
-                  <button type="button">망원동</button>
+                  <button type="button">채널명</button>
                 </li>
-                <li class="rounded bg-white px-2"><button type="button">현위치</button></li>
+                <li class="rounded bg-white px-2"><button type="button">채널명</button></li>
               </ul>
             </div>
-          </section>
-
-          <section>
-            <ul class="flex justify-center gap-1 px-4 pt-2 text-sm">
-              <li class="rounded-2xl bg-lightGreen500 px-[5px] py-1 text-white">
-                <button type="button" class="whitespace-nowrap">음식</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button" class="whitespace-nowrap">아이와 함께</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button" class="whitespace-nowrap">간식</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button" class="whitespace-nowrap">문화예술</button>
-              </li>
-              <li class="rounded-2xl border border-gray-100 px-[5px] py-1">
-                <button type="button" class="whitespace-nowrap">음료</button>
-              </li>
-            </ul>
           </section>
 
           <div class="section-container grow">
@@ -114,9 +65,9 @@
               <!-- 랜더링 부분 -->
               <section id="your-target-element"></section>
               <section class="relative mt-3 px-4 py-2 text-xs font-semibold leading-4">
-                <div class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionPrimary p-2 pt-2 text-center text-white"></div>
-                <h2 class="">멋쟁이사자처럼</h2>
-                <span class="text-lionContent">사진리뷰 2 &middot; 3.1.수</span>
+                <div class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionSecondary p-2 pt-2 text-center text-white">프로필</div>
+                <h2 class="">(게시글 작성자 이름)</h2>
+                <span class="text-lionContent">(날짜)</span>
                 <a href="#">
                   <figure class="">
                     <figcaption class="hidden" aria-hidden="true">피자</figcaption>
@@ -127,51 +78,57 @@
                     맛있었습니다!!
                   </p>
                 </a>
-                <button class="absolute right-2 top-2 rounded-2xl border bg-lionPrimary px-4 py-2">
-                  <img class="toggle-icon" src="../assets/icon/icon-love.svg" alt="" />
+                <button class="absolute right-2 top-2 px-4 py-2">
+                  <span class="block h-1 w-1 bg-gray-400"></span>
+                  <span class="mt-1 block h-1 w-1 bg-gray-400"></span>
+                  <span class="mt-1 block h-1 w-1 bg-gray-400"></span>
                 </button>
               </section>
+              <section id="your-target-element"></section>
               <section class="relative mt-3 px-4 py-2 text-xs font-semibold leading-4">
-                <div class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionPrimary p-2 pt-2 text-center text-white"></div>
-                <h2 class="">집보다는 카페지</h2>
-                <span class="text-lionContent">사진리뷰 2 &middot; 3.1.수</span>
-                <a href="">
+                <div class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionSecondary p-2 pt-2 text-center text-white">프로필</div>
+                <h2 class="">(게시글 작성자 이름)</h2>
+                <span class="text-lionContent">(날짜)</span>
+                <a href="#">
                   <figure class="">
                     <figcaption class="hidden" aria-hidden="true">피자</figcaption>
-                    <img src="../assets/images/food/icecream.png" alt="아이스크림 이미지" class="w-full" />
+                    <img src="../assets/images/food/pizza.png" alt="피자 이미지" class="w-full" />
                   </figure>
                   <p class="ml-2 mt-1 max-w-[320px] text-lionContent">
                     주말엔 매일 줄 서 있어서 먹을 수가 없었는데 평일에 다행히 갈 수 있어서 너무 좋았어요! 줄 안기다리고 먹었는데 와 너무
                     맛있었습니다!!
                   </p>
                 </a>
-                <button class="absolute right-2 top-2 rounded-2xl border bg-lionPrimary px-4 py-2">
-                  <img class="toggle-icon" src="../assets/icon/icon-love.svg" alt="" />
+                <button class="absolute right-2 top-2 px-4 py-2">
+                  <span class="block h-1 w-1 bg-gray-400"></span>
+                  <span class="mt-1 block h-1 w-1 bg-gray-400"></span>
+                  <span class="mt-1 block h-1 w-1 bg-gray-400"></span>
+                </button>
+              </section>
+              <section class="relative mt-3 px-4 py-2 text-xs font-semibold leading-4">
+                <div class="float-left mb-3 mr-2 mt-[-3px] h-10 w-10 rounded-full bg-lionSecondary p-2 pt-2 text-center text-white">프로필</div>
+                <h2 class="">(게시글 작성자 이름)</h2>
+                <span class="text-lionContent">(날짜)</span>
+                <a href="#">
+                  <figure class="">
+                    <figcaption class="hidden" aria-hidden="true">피자</figcaption>
+                    <img src="../assets/images/food/pizza.png" alt="피자 이미지" class="w-full" />
+                  </figure>
+                  <p class="ml-2 mt-1 max-w-[320px] text-lionContent">
+                    주말엔 매일 줄 서 있어서 먹을 수가 없었는데 평일에 다행히 갈 수 있어서 너무 좋았어요! 줄 안기다리고 먹었는데 와 너무
+                    맛있었습니다!!
+                  </p>
+                </a>
+                <button class="absolute right-2 top-2 px-4 py-2">
+                  <span class="block h-1 w-1 bg-gray-400"></span>
+                  <span class="mt-1 block h-1 w-1 bg-gray-400"></span>
+                  <span class="mt-1 block h-1 w-1 bg-gray-400"></span>
                 </button>
               </section>
             </div>
           </div>
         </main>
       </div>
-      <nav class="fixed bottom-0 z-50 h-[70px] w-full max-w-xs bg-white p-2 text-xs">
-        <ul class="flex items-center justify-around">
-          <li>
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-map.svg" alt="지도" />지도</a>
-          </li>
-          <li>
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-save.svg" alt="저장" />저장</a>
-          </li>
-          <li class="flex flex-col items-center">
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-transport.svg" alt="대중교통" />대중교통</a>
-          </li>
-          <li class="flex flex-col items-center">
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-car.svg" alt="내비게이션" />내비게이션</a>
-          </li>
-          <li>
-            <a class="flex flex-col items-center justify-center" href=""><img src="../assets/icon/icon-my.svg" alt="마이페이지" />MY</a>
-          </li>
-        </ul>
-      </nav>
     </div>
   </body>
 </html>
